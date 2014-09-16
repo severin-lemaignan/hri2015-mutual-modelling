@@ -42,7 +42,7 @@
 %(DH) is it too soon to claim learning by teaching benefits in the title...? 
 %(DH) the paper is not about "learning handwriting", it's about the robot.
 \title{\LARGE \bf
-Mutual Modelling: What other Disciplines Teach to Robotics
+Mutual Modelling: \\ What Other Disciplines May Teach to Robotics
 }
 
 % \numberofauthors{3} 
@@ -358,19 +358,18 @@ explanation, negotiation, and so forth.
 
 Dillenbourg proposes in~\cite{sangin2007partner} a model to represent mutual
 modelling situations. He uses the notation \model{A}{B}{X} to denote ``$A$ knows
-that $B$ knows $X$''.  This is a straightforward but useful reduction to reason
-on mutual modelling.  This notation does not mean $A$ has an explicit,
+that $B$ knows $X$''. This notation does not mean $A$ has an explicit,
 monolithic representation of $B$: it must be understood as an abstraction
-referring to complex socio-cognitive processes. Besides, we refer to the
+referring to complex socio-cognitive processes. Besides, he refer to the
 \emph{degree of accuracy} of the model as \Model{A}{B}{X}.
 
-We parametrize and assess the mutual modelling effort through 3 variables:
+He parametrizes and assesses the mutual modelling effort through 3 variables:
 
 \begin{enumerate}
 
     \item Tasks vary a lot with respect to how much they require mutual
-        understanding.  The \emph{grounding criterion}
-        \groundingcriterion~\cite{clark1986referring} refers to
+        understanding.  The \emph{grounding criterion}~\cite{clark1986referring}
+        \groundingcriterion refers to
         how important it is to mutually share a piece of information $X$ to
         succeed the task $T$. It can be computed as the probability to succeed $T$
         despite the fact $X$ is not grounded. $\mathcal{M}^{\circ}_{min}(A,B,X)$
@@ -378,11 +377,10 @@ We parametrize and assess the mutual modelling effort through 3 variables:
         performance. 
 
     \item Before any specific grounding action, there is usually a non-null
-        probability that $X$ is mutually understood by $A$ and $B$: because $X$
-        is part of $A$'s and $B$'s cultures, because it is manifest to co-present
-        subjects or simply because there is not much space for misunderstanding
-        or disagreement about $X$. We could not simply collaborate without a
-        high level of initial grounds. We note the theoretical accuracy of
+        probability that $X$ is mutually understood by $A$ and $B$ (\eg $X$
+        is part of $A$'s and $B$'s cultures, it is manifest to co-present
+        subjects or simply there is not much space for misunderstanding
+        or disagreement about $X$). He note the theoretical accuracy of
         initial grounds $\mathcal{M}^{\circ}_{t_0}(A,B,X)$.
 
     \item The cost of grounding $X$ refers to the physical and cognitive effort
@@ -394,15 +392,18 @@ We parametrize and assess the mutual modelling effort through 3 variables:
 \end{enumerate}
 
 These notations lead to simple initial representations of mutual modelling
-during interactions (hereafter, $H$ stands for the human, while $R$ stands for
-the robot). Figure~\ref{mm_symmetry} represents a dyadic human-robot
-interaction, with $\Delta_1$ illustrating the \emph{symmetry} question ({\it is
-the accuracy of my model related or not to the accuracy of your model?}).
+during interactions.
+
+In order to make it meaningful in the context of HRI, we hereafter use $H$ to
+denote a human, while $R$ stands for a robot. Figure~\ref{mm_symmetry} then
+represents a dyadic human-robot interaction, with $\Delta_1$ illustrating what
+Dillenbourg calls the \emph{symmetry} question ({\it is the accuracy of my model
+related or not to the accuracy of your model?}).
 
 \begin{figure}[htb]
 \centering
 
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[>=latex, scale=0.5]
 
 \draw(0,0) node[anchor=north] (A) {\scriptsize H};
 \draw(10,0) node[anchor=north] (B) {\scriptsize R};
@@ -430,7 +431,7 @@ accuracy of 6 models \Model{H_1}{H_2}{X}, \Model{H_2}{H_1}{X},
 \begin{figure}[htb]
 \centering
 \subcaptionbox{}{ 
-    \begin{tikzpicture}[scale=0.5]
+    \begin{tikzpicture}[>=latex, scale=0.5]
 
     \draw(0,2) node (A) {\scriptsize $H_1$};
     \draw(0,-2) node (B) {\scriptsize $H_2$};
@@ -445,7 +446,7 @@ accuracy of 6 models \Model{H_1}{H_2}{X}, \Model{H_2}{H_1}{X},
     \end{tikzpicture}
 }
 \subcaptionbox{}{ 
-    \begin{tikzpicture}[scale=0.5]
+    \begin{tikzpicture}[>=latex, scale=0.5]
 
     \draw(0,2) node (A) {\scriptsize $H_1$};
     \draw(0,-2) node (B) {\scriptsize $H_2$};
@@ -470,17 +471,17 @@ accuracy when modelling the robot $R$? ($\Delta_2 = \Delta(\M{H_1}{C}{X},
 \M{H_2}{C}{X})$), and conversely, what may lead $R$ to model more accurately
 $H_1$ or $H_2$? ($\Delta_3= \Delta(\M{C}{H_1}{X}, \M{C}{H_2}{X})$).
 
-Finally, this model also suggest a \emph{rectangle question}: how self-
-versus other modelling compares ($\Delta_4$ in
-Figure~\ref{mm_rectangle})? This gives an indication of meta-cognitive skills of
-the agents. We can also question if the modelling skills depend upon what
-aspects are being modeled ($X$ or $Y$) which would explain vertical differences ($\Delta_5$ in
+Finally, Dillenbourg also suggests a \emph{rectangle question}: how self- versus
+other modelling compares ($\Delta_4$ in Figure~\ref{mm_rectangle})? This gives
+an indication of meta-cognitive skills of the agents. We can also question if
+the modelling skills depend upon what aspects are being modeled ($X$ or $Y$)
+which would explain vertical differences ($\Delta_5$ in
 Figure~\ref{mm_rectangle}).
 
 \begin{figure}[htb]
 \centering
 
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[>=latex, scale=0.5]
 
     \draw(0,0) node (a) {\scriptsize \Model{A}{ B}{ X}};
     \draw(10,0) node (b) {\scriptsize \Model{A}{ A}{ X}};
@@ -498,10 +499,8 @@ Figure~\ref{mm_rectangle}).
 \label{mm_rectangle}
 \end{figure}
 
-This model, \emph{designed in the context of human collaboration}, represents
-our scientific starting point to formalize mutual modelling in human-robot
-interaction.
-
+This model, designed in the context of human collaboration, 
+evidences questions that are certainly relevant to human-robot interactions.
 
 \begin{figure}
         \centering
@@ -563,6 +562,7 @@ interaction.
         avoid (especially true for learning situations, but still applicable to
         general interaction)
     \item concept of \emph{grounding criterion}
+    \item repair strategies
 \end{itemize},
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
