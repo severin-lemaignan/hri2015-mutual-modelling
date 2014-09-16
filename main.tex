@@ -1,0 +1,313 @@
+\documentclass{sig-alternate}
+
+% UTF8 support
+\usepackage[utf8x]{inputenc}
+
+
+\usepackage{hyperref}
+\usepackage{epsf,graphicx}
+\graphicspath{{figures/}}
+\usepackage{multicol}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+
+
+\newcommand{\eg}{{\textit{e.g.~}}}
+\newcommand{\etal}{{\textit{et al.~}}}
+\newcommand{\ie}{{\textit{i.e.~}}}
+
+% for mutual modelling in CSCL
+\newcommand{\Mmodel}[3]{{\mathcal{M}(#1, #2, #3)}}
+\newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
+\newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
+
+
+%
+% --- Author Metadata here ---
+\conferenceinfo{10th ACM/IEEE International Conference on Human-Robot Interaction}{2015 Portland, USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+%(DH) is it too soon to claim learning by teaching benefits in the title...? 
+%(DH) the paper is not about "learning handwriting", it's about the robot.
+\title{\LARGE \bf
+Mutual Modelling: What other Disciplines Teach to Robotics
+}
+
+% \numberofauthors{3} 
+% \author{
+% \alignauthor
+% Séverin Lemaignan\\
+% Pierre Dillenbourg\\
+%    \affaddr{Computer-Human Interaction in Learning and Instruction Laboratory (CHILI)}\\
+%    \affaddr{École Polytechnique Fédérale\\ de Lausanne (EPFL)}\\
+%    \affaddr{CH-1015 Lausanne, Switzerland}\\
+%    \email{firstname.lastname@epfl.ch}
+% \alignauthor
+% Claire Braboszcz\\
+%    \affaddr{Laboratory for Neurology \& \\Imaging of Cognition (LabNIC)}\\
+%    \affaddr{University of Geneva}\\
+%    \affaddr{CH-1211 Geneva, Switzerland}\\
+%    \email{claire.braboszcz@unige.ch}
+% }
+
+%(DH) my EPFL email address won't work for much longer....
+
+
+\begin{document}
+
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Mutual modelling, the reciprocal ability to establish a mental model of the
+other, plays a fundamental role in human interactions. This complex cognitive
+skill is however difficult to fully apprehend as it encompasses multiple
+neuronal, psychological and social mechanisms that are generally not easily
+turned into computational models suitable for robots.
+
+This article attempts to present in a practical way several perspectives on
+mutual modelling from a range of disciplines, and reflects on how these
+perspectives can be beneficial to the advancement of social cognition in
+robotics: we gather here both basic tools (formalisms, models) and exemplary
+experimental settings that we believe will expand the corpus of knowledge
+readily available to human-robot interaction research.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Human social dynamics rely upon the ability to effectively attribute beliefs,
+goals and percepts to other people. This set of meta-representational abilities
+shapes what is called a theory of mind or the ability to mentalize, and leads to
+mutual modelling: the reciprocal ability to establish a mental model of the
+other. This lays at the core of human interactions: normal human social
+interactions depend upon the recognition of other sensory perspectives, the
+understanding of other mental states, and the recognition of complex non-verbal
+cues of attention and emotional state.
+
+As such, transferring these cognitive skills to social robots is an important
+research objective, also explicitly underlined as being one of the EU priorities
+within the Horizon 2020 framework, which emphasizes the need to endow artificial
+systems with new cognitive capabilities, beyond "repetitive problem solving".
+Until now, however, the human-robot interaction (HRI) community has only
+scratched the surface: in~\cite{scassellati2002theory}, Brian Scassellati gives
+an account of Leslie's and Baron-Cohen's respective models of the emergence of a
+theory of mind from the perspective of robotics, but reported implementation
+work is limited to simple perceptual precursors. Since then, research in this
+field has been focused on applications relying on Flavell's \emph{Level 1}
+perspective-taking, i.e. perspective-taking that only requires perceptual
+abilities ("\emph{I see (you do not see the book})"), and actually mostly
+limited to visual perception (relevant work include
+Breazeal~\cite{Breazeal2006}, Trafton~\cite{Trafton2005} and
+Ros~\cite{Ros2010}).
+
+
+\section{The developmental psychology perspective}
+
+\begin{figure}[h!t]
+        \centering
+        \includegraphics[width=0.7\linewidth]{sally_ann}
+        \caption{The False-Beliefs experiment: two puppets, "Ann" and "Sally" face each other, with two
+    boxes between them. A child (the subject) observes. Ann puts a ball in the
+beige box and then leaves. While she is absent, Sally moves the ball to the blue
+box. Ann returns. The experimenter asks the child: \emph{Where Ann would look for
+the ball?} Without a theory of mind, the child is not able to ascribe false
+beliefs to Ann, and therefore incorrectly answers \emph{In the blue box}.}
+
+        \label{false-beliefs}
+\end{figure}
+
+
+Based on perspective taking Level 1 alone, Breazeal et
+al.~\cite{breazeal2009embodied} and Warnier et al.~\cite{warnier2012when}
+successfully tackled the classical hallmark of theory of mind, the
+False-Beliefs experiment (Figure~\ref{false-beliefs}, introduced
+by~\cite{wimmer1983beliefs}, experimental setting by~\cite{Baron-Cohen1985}).
+They demonstrated complete human-robot interaction scenarios where robots
+recognize and handle false-belief situations in dyadic or triadic interactions,
+and exhibit helping behaviours that account for the missing/false beliefs of the
+human partners.
+
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{representation-perspective-taking}
+        \caption{\emph{Visual} perspectives allow for a first level of mutual
+            modelling. However, to correctly comprehend the scene,
+            \emph{representation-level} perspective taking is required: what
+            does the power socket means to the baby, what does the situation
+            means to the mother.}
+
+        \label{representation-level}
+\end{figure}
+
+While an important precursor, this does not address how the human
+\emph{represents} its environment (Flavell's Level 2) and hence understands it:
+Figure~\ref{representation-level} illustrates this difference between
+perspective-taking Levels 1 and 2 in an imaginary human-robot interaction
+scenario. The \emph{visual} perspective of the baby and the mother are
+represented: a robot endowed with perspective-taking level 1 is able to compute
+that the baby looks at the plug and the mother looks at the baby.
+\emph{Representation}-level perspective taking, on the other hand, would require
+the robot to represent what the socket means to the baby (an attractive
+affordance), and what the baby's behaviour represents to the mother (a potential
+danger).
+
+
+Incidentally, the False-beliefs experiment was proposed by Baron-Cohen in the
+frame of his research on autism (he shows that autistic children seem to
+actually lack a theory of mind and suggests this as the primary cause of their
+social impairments), and Frith and Happé further note in ~\cite{frith1994autism}
+that this specific deficit of autism has led to a large amount of research which
+proved, in turn, highly beneficial to the study of the development of theory of
+mind in general.
+
+Drawing from experimental research on autism, the next logical step is to look
+at other complex mind representations capabilities, what are the tasks
+exhibiting them, how do they socially impair subjects who lack them, and how
+would they transfer to robots.
+
+Frith and Happé reference in~\cite{frith1994autism} 13 such tasks, identified
+during the study of social cognition by autistic children. Each of them is
+proposed in two versions: one does not require mentalizing, while the other does
+require it. One of these tasks, for example, required children to distinguish
+emotions, namely happy/sad faces on one hand (situation-based emotion), and
+surprised faces on the other (belief-based emotion)~\cite{baron1993children}.
+Another task, based on the \emph{penny-hiding game}, contrasts the two
+conditions in terms of \emph{object occlusion} vs \emph{information
+occlusion}~\cite{baron1992out}.
+
+These tasks prototypically illustrate social meta-cognition: one need to
+represent and reflect on someone else representations (and not only
+perceptions), and they are not addressed by today's research on social robots.
+The question that follows is therefore: notwithstanding low-level perceptual or
+motor limitations, \textbf{what are the missing meta-cognitive skills required
+for a robot to successfully pass these socio-cognitive tasks?}
+
+The extensive literature on the emergence of mind modelling by infants suggests
+some perspectives. Flavell relates perspective-taking Level 1 to establishing
+\emph{cognitive connections} (I see, I hear, I want, I like, I fear...), in
+contrast to perspective-taking Level 2 that relates to manipulating
+\emph{representations }~\cite{flavell1990developmental}.  This is exemplified by
+the \emph{appearance-reality} tasks, like the \emph{elephant mask} experiment
+proposed in~\cite{flavell1990developmental}: 3-years old children are not able
+to tell that an experimenter hidden behind a large elephant mask but who speaks
+normally \emph{looks} like an elephant, \emph{sounds} like the experimenter, and
+\emph{really is} the experimenter.  It appears that, while children before 4
+years are able to explicitly manipulate cognitive connections (they know for
+instance that these are largely independent of each other and that they can
+evolve over time) and know as well that their own connections are independent of
+those of other people, they do not think that one concept can \emph{seriously}
+(ie, non playfully) hold several, possibly conflicting, representations.
+
+This \emph{connection-representation} account appears to be an significant
+component of a general theory of mind (one need to recognize that the same
+object/concept may have different, serious, representations to then accept false
+beliefs for instance), and, from an artificial intelligence perspective, raises
+an interesting challenge: \textbf{how to design a meta-representational system
+that supports and manipulates multiple cognitive connections \emph{and}
+representations?} 
+
+a second direction for the 'meta-cognitive foundations of mind modelling' is
+Leslie's paper on the role of pretense []. I still need to investigate it
+
+another paper of high relevance is by Frye et al. []: they use a computational
+metaphor to approach theory of mind, contrasting here also
+rule-based tasks with tasks requiring a theory of mind. I also need to
+investigate it further.
+
+\section{The Philosophy of Mind Perspective}
+
+
+The theoretical perspective we propose to explore relies on the formalisation
+and modelling of \emph{representation}-level meta-cognitive abilities through
+\emph{epistemic modal logic}~\cite{hendricks2008epistemic}. Modal logics looks
+at the formal representation of \emph{possible worlds} , \ie the
+\emph{possibility} or \emph{necessity} of certain assertions to hold  is well
+suited to build mathematical representation of situations like "\emph{the robot
+knows (the baby may not know what a power socket is)}". The objective here is to
+represent socio-cognitive capabilities as logical objects (based on techniques
+surveyed by Verbrugge~\cite{verbrugge2009logic}) that can be reasoned about,
+manipulated, and eventually transposed onto robots. Extensive literature on
+modal logics and their applicability to artificial agent is available (in
+particular by Shapiro, Reiter and Levesque.  Herzig~\cite{herzig2014logics}
+provides a recent survey); we plan to specifically base our work on the
+\emph{doxastic epistemic logic} by van Ditmarsch and
+Labuschagne~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
+for modeling \emph{theory of mind} mechanisms.
+
+%, and we will research how such a logic model can **represent the experimental situations** described hereafter,
+%and **transpose in a principled way into a knowledge representation framework** for social robots.
+
+
+\section{The Learning Sciences Perspective}
+\begin{figure}
+        \centering
+        \setlength{\columnsep}{0.1cm}
+        \begin{multicols}{2}
+            \includegraphics[width=1.0\columnwidth]{triadic_false_beliefs.pdf}
+
+            \resizebox{\columnwidth}{!}{
+            \begin{tikzpicture}[
+                    >=latex,
+                scale=0.5]
+
+                \draw(0,2) node (A) {\scriptsize Sally};
+                \draw(0,-2) node (B) {\scriptsize Ann};
+                \draw(10,0) node (C) {\scriptsize robot};
+
+                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
+                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
+                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
+                \draw[->,very thick] (A) to (C);
+                \draw[->,very thick] (B) to (C);
+
+
+                \draw(0,-4) node (A) {\scriptsize Sally};
+                \draw(0,-8) node (B) {\scriptsize Ann};
+                \draw(10,-6) node (C) {\scriptsize robot};
+
+                \draw(5,-4) node {\scriptsize \Model{R}{ Sally}{ X}};
+                \draw(5,-8) node {\scriptsize \Model{R}{ Ann}{ X}};
+                \draw[dashed, <->] (3,-5.2) -- (3,-7.2) node[midway, sloped, above]
+                {$\Delta_3$};
+                \draw[<-,very thick] (A) to (C);
+                \draw[<-,very thick] (B) to (C);
+
+            \end{tikzpicture}
+            }
+        \end{multicols}
+
+    \caption{blabla}
+    \label{}
+\end{figure}
+
+
+\section{The Neuroscience Perspective}
+
+\section{Perspectives for Robotics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgments}
+
+This research was supported by the Swiss National Science Foundation through the
+National Centre of Competence in Research Robotics.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}
+\bibliographystyle{abbrv}
+\bibliography{mutual-modelling}
+
+%\end{thebibliography}
+
+\end{document}
