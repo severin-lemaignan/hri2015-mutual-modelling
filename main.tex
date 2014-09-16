@@ -74,9 +74,12 @@ turned into computational models suitable for robots.
 This article attempts to present in a practical way several perspectives on
 mutual modelling from a range of disciplines, and reflects on how these
 perspectives can be beneficial to the advancement of social cognition in
-robotics: we gather here both basic tools (formalisms, models) and exemplary
-experimental settings that we believe will expand the corpus of knowledge
-readily available to human-robot interaction research.
+robotics. We gather here both basic tools (formalisms, models) and exemplary
+experimental settings that are of relevance to robotics.
+
+This contribution is expected to expand the corpus of knowledge readily
+available to human-robot interaction research, and we believe that it may be
+leveraged to build robots with better social capabilities.
 
 \end{abstract}
 
@@ -110,7 +113,7 @@ Breazeal~\cite{Breazeal2006}, Trafton~\cite{Trafton2005} and
 Ros~\cite{Ros2010}).
 
 
-\section{The developmental psychology perspective}
+\section{Mutual Modelling and Developmental Psychology}
 
 \begin{figure}[h!t]
         \centering
@@ -224,7 +227,7 @@ metaphor to approach theory of mind, contrasting here also
 rule-based tasks with tasks requiring a theory of mind. I also need to
 investigate it further.
 
-\section{The Philosophy of Mind Perspective}
+\section{Mutual Modelling, Philosophy of Mind and Logic}
 
 
 The theoretical perspective we propose to explore relies on the formalisation
@@ -248,7 +251,93 @@ for modeling \emph{theory of mind} mechanisms.
 %and **transpose in a principled way into a knowledge representation framework** for social robots.
 
 
-\section{The Learning Sciences Perspective}
+\section{Mutual Modelling in Psycholinguistics and Collaborative Learning}
+
+\emph{Computer Supported Collaborative Learning} (CSCL) researches the cognitive
+mechanisms and practical techniques underpinning efficient learning in social
+situations, and from its very beginning, CSCL research has been following
+Roschelle and Teasley suggestion~\cite{roschelle1995construction} that
+collaborative learning has something to do with the process of constructing and
+maintaining a shared understanding of the task at hand. Building a shared/mutual
+understanding refers to the upper class of collaborative learning situations,
+those in which students should build upon each other's understanding to refine
+their own understanding.  What is expected to produce learning is not the mere
+fact that two students build the same understanding but the cognitive effort
+they have to engage to build this shared
+understanding~\cite{schwartz1995emergence}. This effort can be observed by the
+frequency of rich interactions, \ie interactions whose occurrence has been
+related to learning: (self-) explanations in cognitive science (Chi ; Webb),
+conflict resolution in socio-cognitive theories (Doise), mutual regulation
+(Blaye,) in a Vygostkian perspective, etc. The construction of a shared
+understanding has been investigated for several years in psycholinguistics,
+under the  notion of ``grounding''~\cite{clark1986referring}.  However, the
+relevance of grounding mechanisms for explaining learning outcomes has been
+questioned. The monitoring and repair of mis-understanding explains for instance
+referential failures in short dialogue episodes but does hardly predict
+conceptual change over longer sessions~\cite{dillenbourg2006sharing}. The
+cumulative effect of grounding episodes can probably be better understood from a
+socio-cultural perspective: ``collaborative learning is associated with the
+increased cognitive-interactional effort involved in the transition from
+learning to understand each other to learning to understand the meanings of the
+semiotic tools that constitute the mediators of interpersonal
+interaction''~\cite{baker1999role}.  Several scholars suggest that CSCL research
+should go deeper in the understanding of how partners engage into shared meaning
+making~\cite{stahl2007meaning} or \emph{intersubjective} meaning
+making~\cite{suthers2006technology}.
+
+Paradoxically, while Clark's theory is somewhat too linguistic from a conceptual
+change viewpoint, it is criticized at the same time as being too cognitivist by
+some psycholinguists, \ie as overestimating the amount shared knowledge and
+mutual representations actually necessary to conduct a dialogue. The fundamental
+issue, as old as philosophy, is the degree of coupling between the different
+levels of dialogue, mostly between the lexical / syntactical level and the
+deeper semantic levels. In~\cite{pickering2006alignment}, Pickering and Garrod
+argue that the mutual understanding starts mostly with a \emph{superficial
+alignment} at the level of the linguistic representations, due to priming
+mechanisms, and that this local alignment may -- in some cases -- lead to a
+\emph{global alignment} of the semantic level (\emph{deep grounding}).  For
+these authors, the convergence in dialogue, and even the repair of some
+misunderstandings, is explained by this mimetic behavior more than by a
+monitoring of each other's knowledge: ``...interlocutors do not need to monitor
+and develop full common ground as a regular, constant part of routine
+conversation, as it would be unnecessary and far too costly. Establishment of
+full common ground is, we argue, a specialized and non-automatic process that is
+used primarily in times of difficulty (when radical misalignment becomes
+apparent).'' This view is actually not incompatible with Clark's grounding
+criterion: the degree of shared understanding that peers need to reach depends
+upon the task they perform. For instance, a dialogue between two surgeons might
+rely on superficial alignment if they talk about their friends but has to
+guarantee accurate common grounds when talking about which intervention will be
+conducted in which way on which patient.  Some CSCL scholars stressed the
+``illusion of shared understanding'', \ie the potential decoupling between
+linguistic alignment and actual shared meanings.
+
+This interesting cognitive science debate mostly occurred outside the field of
+learning. In education, the question is to relate these mechanisms to learning
+outcomes. Is linguistic alignment sufficient to trigger conceptual change? Does
+negotiation of meaning only occurs when partners monitor and diagnose each
+other's knowledge. If the ratio between shallow alignment and deep grounding
+depends upon the task, and if deep grounding is a condition for learning, then
+the pedagogical challenge is to design tasks that require deep grounding. Most
+empirical studies on grounding and alignment are conducted with tasks, which
+despite being qualified as ``ecologically valid'' by their authors, are mere
+referencing tasks such as asking the way to the train station or helping the
+peer to choose a picture among many. In this contribution, we explore several
+richer tasks such as arguing on a sensitive issue or building a concept map.  
+
+Deep grounding or shared meaning making requires some cognitive load. For
+\cite{clark1986referring}, what is important is not the individual effort made
+by the receiver of a communicative act, but the overall least collaborative
+effort.  The cost of producing a perfect utterance may be higher than the cost
+of repairing the problems that may arise through misunderstandings. For
+instance, subjects are less careful about adapting their utterances to their
+partner when they know they can provide feedback on his/her
+understanding~\cite{schober1993spatial}. We introduced the notion of
+\emph{optimal collaborative effort}~\cite{dillenbourg1995evolution} to stress
+that misunderstanding should not be viewed as something to be avoided (if this
+was possible), but as an opportunity to engage into verbalization, explanation,
+negotiation, and so forth.
+
 \begin{figure}
         \centering
         \setlength{\columnsep}{0.1cm}
@@ -291,9 +380,24 @@ for modeling \emph{theory of mind} mechanisms.
 \end{figure}
 
 
-\section{The Neuroscience Perspective}
+\section{Mutual Modelling and Neurosciences}
+
+\begin{itemize}
+    \item models?
+    \item experimental settings?
+\end{itemize}
 
 \section{Perspectives for Robotics}
+
+\begin{itemize}
+    \item concept of \emph{superficial alignment} vs \emph{global alignment} or
+        \emph{deep grounding}
+    \item mimetism can be a more efficient repair strategy than full grounding
+    \item concept of \emph{overall least collaborative effort}: misunderstanding should not be viewed as something to systematically
+        avoid (especially true for learning situations, but still applicable to
+        general interaction)
+\end{itemize},
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Acknowledgments}
