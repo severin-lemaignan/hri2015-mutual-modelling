@@ -42,7 +42,7 @@
 %(DH) is it too soon to claim learning by teaching benefits in the title...? 
 %(DH) the paper is not about "learning handwriting", it's about the robot.
 \title{\LARGE \bf
-Mutual Modelling: \\ What Other Disciplines May Teach to Robotics
+Mutual Modelling in robotics: \\Inspirations for the next steps
 }
 
 % \numberofauthors{3} 
@@ -67,12 +67,11 @@ Mutual Modelling: \\ What Other Disciplines May Teach to Robotics
 
 \begin{document}
 
-
-
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
+
 Mutual modelling, the reciprocal ability to establish a mental model of the
 other, plays a fundamental role in human interactions. This complex cognitive
 skill is however difficult to fully apprehend as it encompasses multiple
@@ -104,29 +103,26 @@ interactions depend upon the recognition of other sensory perspectives, the
 understanding of other mental states, and the recognition of complex non-verbal
 cues of attention and emotional state.
 
-As such, transferring these cognitive skills to social robots is an important
-research objective, also explicitly underlined as being one of the EU priorities
-within the Horizon 2020 framework, which emphasizes the need to endow artificial
-systems with new cognitive capabilities, beyond "repetitive problem solving".
+As such, adapting and transferring these cognitive skills to social robots is an important
+research objective.
+
 Until now, however, the human-robot interaction (HRI) community has only
-scratched the surface: in~\cite{scassellati2002theory}, Brian Scassellati gives
-an account of Leslie's and Baron-Cohen's respective models of the emergence of a
-theory of mind from the perspective of robotics, but reported implementation
-work is limited to simple perceptual precursors. Since then, research in this
-field has been focused on applications relying on Flavell's \emph{Level 1}
-perspective-taking, i.e. perspective-taking that only requires perceptual
-abilities ("\emph{I see (you do not see the book})"), and actually mostly
-limited to visual perception (relevant work include
-Breazeal~\cite{Breazeal2006}, Trafton~\cite{Trafton2005} and
+scratched the surface: in~\cite{scassellati2002theory}, Brian Scassellati gave
+an initial account of Leslie's and Baron-Cohen's respective models of the
+emergence of a theory of mind (we discuss them below) from the perspective of
+robotics, but reported implementation work was limited to simple perceptual
+precursors (like face detection or color saliencies detection). Since then,
+research in this field has been focused on applications relying on Flavell's
+\emph{Level 1}~\cite{flavell1977development} perspective-taking, \ie
+perspective-taking that only requires perceptual abilities ("\emph{I see (you do
+not see the book})"), and actually mostly limited to visual perception (relevant
+work include Breazeal~\cite{Breazeal2006}, Trafton~\cite{Trafton2005} and
 Ros~\cite{Ros2010}).
-
-
-\section{Mutual Modelling and Developmental Psychology}
 
 \begin{figure}[h!t]
         \centering
         \includegraphics[width=0.7\linewidth]{sally_ann}
-        \caption{The False-Beliefs experiment: two puppets, ``Ann'' and
+        \caption{The false belief experiment: two puppets, ``Ann'' and
             ``Sally'' face each other, with two boxes between them. A child (the
             subject) observes. Ann puts a ball in the beige box and then leaves.
             While she is absent, Sally moves the ball to the blue box. Ann
@@ -139,17 +135,24 @@ Ros~\cite{Ros2010}).
         \label{false-beliefs}
 \end{figure}
 
-
-Based on perspective taking Level 1 alone, Breazeal et
+Based on perspective taking \emph{Level 1} alone, Breazeal et
 al.~\cite{breazeal2009embodied} and Warnier et al.~\cite{warnier2012when}
-successfully tackled the classical hallmark of theory of mind, the
-False-Beliefs experiment (Figure~\ref{false-beliefs}, introduced
-by~\cite{wimmer1983beliefs}, experimental setting by~\cite{Baron-Cohen1985}).
-They demonstrated complete human-robot interaction scenarios where robots
-recognize and handle false-belief situations in dyadic or triadic interactions,
-and exhibit helping behaviours that account for the missing/false beliefs of the
-human partners.
+successfully tackled the classical hallmark of theory of mind, the false belief
+experiment (Figure~\ref{false-beliefs}, introduced by~\cite{wimmer1983beliefs},
+original experimental setting by~\cite{Baron-Cohen1985}). They demonstrated
+complete human-robot interaction scenarios where robots recognize and handle
+false belief situations in dyadic or triadic interactions, and exhibit helping
+behaviours that account for the missing/false beliefs of the human partners.
 
+Those are significant achievements, also reassuring as to endow our robots with
+advanced soco-cognitive capabilities.
+
+What we would
+deeper, more
+intricate, levels of theory of mind may prove in reach. What about Flavell's
+\emph{Level 2} perspective-taking
+
+\section{Mutual Modelling and Developmental Psychology}
 
 \begin{figure}
         \centering
@@ -176,7 +179,7 @@ affordance), and what the baby's behaviour represents to the mother (a potential
 danger).
 
 
-Incidentally, the False-beliefs experiment was proposed by Baron-Cohen in the
+Incidentally, the false belief experiment was proposed by Baron-Cohen in the
 frame of his research on autism (he shows that autistic children seem to
 actually lack a theory of mind and suggests this as the primary cause of their
 social impairments), and Frith and Happé further note in ~\cite{frith1994autism}
