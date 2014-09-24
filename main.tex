@@ -9,6 +9,7 @@
 \graphicspath{{figures/}}
 \usepackage{multicol}
 \usepackage{subcaption}
+\usepackage{booktabs}
 
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{tikz}
@@ -42,7 +43,7 @@
 %(DH) is it too soon to claim learning by teaching benefits in the title...? 
 %(DH) the paper is not about "learning handwriting", it's about the robot.
 \title{\LARGE \bf
-Mutual Modelling in robotics: \\Inspirations for the next steps
+Mutual Modelling in Robotics: \\Inspirations for the Next Steps
 }
 
 % \numberofauthors{3} 
@@ -139,7 +140,7 @@ Based on perspective taking \emph{Level 1} alone, Breazeal et
 al.~\cite{breazeal2009embodied} and Warnier et al.~\cite{warnier2012when}
 successfully tackled the classical hallmark of theory of mind, the false belief
 experiment (Figure~\ref{false-beliefs}, introduced by~\cite{wimmer1983beliefs},
-original experimental setting by~\cite{Baron-Cohen1985}). They demonstrated
+original experimental setting by~\cite{baron1985does}). They demonstrated
 complete human-robot interaction scenarios where robots recognize and handle
 false belief situations in dyadic or triadic interactions, and exhibit helping
 behaviours that account for the missing/false beliefs of the human partners.
@@ -241,29 +242,12 @@ metaphor to approach theory of mind, contrasting here also
 rule-based tasks with tasks requiring a theory of mind. I also need to
 investigate it further.
 
-\section{Mutual Modelling, Philosophy of Mind and Logic}
+Limits of ToM:
+\cite{keysar2003limits}: adults, even with working theory of mind, may prefer
+their own perspective and ignore the other perspective.
 
-
-The theoretical perspective we propose to explore relies on the formalisation
-and modelling of \emph{representation}-level meta-cognitive abilities through
-\emph{epistemic modal logic}~\cite{hendricks2008epistemic}. Modal logics looks
-at the formal representation of \emph{possible worlds} , \ie the
-\emph{possibility} or \emph{necessity} of certain assertions to hold  is well
-suited to build mathematical representation of situations like "\emph{the robot
-knows (the baby may not know what a power socket is)}". The objective here is to
-represent socio-cognitive capabilities as logical objects (based on techniques
-surveyed by Verbrugge~\cite{verbrugge2009logic}) that can be reasoned about,
-manipulated, and eventually transposed onto robots. Extensive literature on
-modal logics and their applicability to artificial agent is available (in
-particular by Shapiro, Reiter and Levesque.  Herzig~\cite{herzig2014logics}
-provides a recent survey); we plan to specifically base our work on the
-\emph{doxastic epistemic logic} by van Ditmarsch and
-Labuschagne~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
-for modeling \emph{theory of mind} mechanisms.
-
-%, and we will research how such a logic model can **represent the experimental situations** described hereafter,
-%and **transpose in a principled way into a knowledge representation framework** for social robots.
-
+Agreement is understood later than 2nd order ToM because it's recursive.
+\cite{verbrugge2009logic}, p. 664
 
 \section{Mutual Modelling in Psycholinguistics and Collaborative Learning}
 
@@ -358,6 +342,7 @@ this was possible), but as an opportunity to engage into verbalization,
 explanation, negotiation, and so forth.
 
 \subsection{A notation for mutual modelling}
+\label{cscl-model}
 
 Dillenbourg proposes in~\cite{sangin2007partner} a model to represent mutual
 modelling situations. He uses the notation \model{A}{B}{X} to denote ``$A$ knows
@@ -548,14 +533,39 @@ evidences questions that are certainly relevant to human-robot interactions.
 
 \subsection{Examples of experimental settings}
 
-\section{Mutual Modelling and Neurosciences}
+\section{Two more perspectives}
+
+\subsection{Mutual Modelling and Neurosciences}
 
 \begin{itemize}
     \item models?
     \item experimental settings?
 \end{itemize}
 
-\section{Perspectives for Robotics}
+
+\subsection{Mutual Modelling and Formal Epistemology}
+\label{formal-epistemology}
+
+\emph{Modal logics} look at the formal representation of \emph{possible
+worlds}, \ie the \emph{possibility} or \emph{necessity} of certain assertions
+to hold, and is naturally suited to build mathematical representations of
+situations such as ``\emph{the robot knows (the baby may not know what a power
+socket is)}''.
+
+Formal approaches to mutual modelling and theory of mind deals with
+agent-dependant representations of \emph{knowledge} (a prototypical
+\emph{meta-cognitive} skill) and are a refinement of \emph{epistemic modal
+logic}~\cite{hendricks2008epistemic}. Verbrugge proposes
+in~\cite{verbrugge2009logic} a survey of the state of the art in epistemic logic
+applied to \emph{social reasoning}, and he underlines the recent advancement
+towards modeling \emph{human} social cognition, which implies for instance
+limited rationality.
+
+
+\emph{doxastic epistemic logic} by van Ditmarsch and
+Labuschagne~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
+for modeling \emph{theory of mind} mechanisms.
+
 
 \begin{itemize}
     \item concept of \emph{superficial alignment} vs \emph{global alignment} or
