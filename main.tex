@@ -566,18 +566,141 @@ limited rationality.
 Labuschagne~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
 for modeling \emph{theory of mind} mechanisms.
 
+\section{What does that means for robotics?}
+
+Several lessons can be taken out of these four perspectives on mutual modelling.
+First, \textbf{concepts} and terminology stand out and social robotics would
+benefit of incorporating them. Second, \textbf{models} of mutual modelling exist that
+would make sense in robotics as well, along with investigation strategies and
+approaches that translate well to robotics. Finally, we believe that several
+\textbf{experimental settings} designed and successfully tested in other disciplines
+shape an interesting way forward for (experimental) social robotics.
+
+We summarize hereafter our main findings.
+
+\subsection{Concepts}
+
+\subsubsection{Classifying mutual modelling}
 
 \begin{itemize}
-    \item concept of \emph{superficial alignment} vs \emph{global alignment} or
-        \emph{deep grounding}
-    \item mimetism can be a more efficient repair strategy than full grounding
-    \item concept of \emph{overall least collaborative effort}: misunderstanding should not be viewed as something to systematically
+    \item cognitive connections/mental representations
+    \item level 1/level 2
+    \item concept of \emph{superficial alignment} vs \emph{global alignment} or \emph{deep grounding}
+\end{itemize}
+
+
+\subsubsection{To what extent should we model the other?}
+
+\emph{Modelling order}: 2nd order around 8~\cite{perner1988higher}
+concept of \emph{overall least collaborative effort}: misunderstanding should not be viewed as something to systematically
         avoid (especially true for learning situations, but still applicable to
         general interaction)
-    \item concept of \emph{grounding criterion}
-    \item repair strategies
-\end{itemize},
 
+concept of \emph{grounding criterion}
+
+\subsection{Models and Approaches}
+
+\subsubsection{The formal proposition of modal logics}
+
+We have presented at section~\ref{formal-epistemology} the efforts already
+conducted in the field of formal epistemology to represent socio-cognitive
+capabilities (and in particular, the ones related to mutual modelling) as
+logical objects that can be reasoned about and manipulated. This mathematical
+objects are natural candidates for transposition into representational systems
+and controllers for robots, especially as an extensive literature on modal
+logics and their applicability to artificial agent already exist, in particular
+by Shapiro, Reiter and Levesque -- with Golog~\cite{levesque1997golog} and its
+derivatives. Herzig~\cite{herzig2014logics} provides a recent survey.
+
+\subsubsection{Repairing misunderstandings}
+
+\begin{itemize}
+    \item mimetism can be a more efficient repair strategy than full grounding
+    \item repair strategies
+\end{itemize}
+
+\subsubsection{From mutual modelling to interaction modelling}
+
+The model presented at section~\ref{cscl-model}
+
+\subsection{Experimental settings and methodologies}
+
+When reading literature on experimental research on autism, the apparent
+simplicity of the proposed protocols often striking. This experimental research
+is especially relevant to robotics because of the careful choice of interaction
+modalities: since autistic children frequently exhibit impairments beyond social
+ones (such as motor or linguistic ones), the experiments must be designed such
+that they require only basic cognitive skills besides the social abilities that
+are tested. The Sally and Anne task, for instance, requires the observing child
+to be able to visually follow the marble, to remember the true location of the
+marble, to understand simple questions (``Where will Sally look for her
+marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually to give
+an answer, either verbally or with a gesture (the two first premises being
+actually checked through explicit questions: ``Where is the
+marble really?'' -- reality question -- and ``Where was the marble in the
+beginning?'' -- memory question).
+
+Likewise, current social robots have limited cognitive skills (no fast yet fine
+motor skills, limited speech production and understanding, limited scene
+segmentation and object recognition capabilities, etc.) and such tasks
+that effectively test a single cognitive skill (in this case, mentalizing) in
+near isolation are of high interest for experimental social robotics.
+
+Frith and Happé have listed in~\cite{frith1994autism} eight tasks
+(Table~\ref{mentalizing-tasks} reproduces this list) that have been
+used in the literature to evidence the presence or absence of a theory of mind
+by children. This list is interesting in that it mirrors pairs of tasks: ones
+which do not require mentalizing with similar ones which do require mentalizing,
+thus providing control tasks.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{p{0.4\linewidth}p{0.5\linewidth}}
+        \toprule
+        No mentalizing required           & Mentalizing required          \\
+        \midrule
+        Ordering behavioural pictures     & Ordering mentalistic pictures~\cite{baron1986mechanical} \\
+        Understanding see                 & Understanding know~\cite{perner1989exploration}            \\
+        Protoimperative pointing          & Protodeclarative pointing~\cite{baron1989perceptual}     \\
+        Sabotage                          & Deception~\cite{sodian1992deception}                     \\
+        False photographs                 & False beliefs~\cite{leslie1992domain}                 \\
+        Recognizing happiness and sadness & Recognizing surprise~\cite{baron1993children}          \\
+        Object occlusion                  & Information occlusion~\cite{baron1992out}         \\
+        Literal expression                & Metaphorical expression~\cite{happe1993communicative}       \\
+        \bottomrule
+    \end{tabular}
+    \caption{Tasks requiring or not mentalizing to pass, listed by Frith and Happé in~\cite{frith1994autism}}
+    \label{mentalizing-tasks}
+\end{table}
+
+Object occlusion vs Information occlusion is one example of a (pair of) task(s)
+which evidence representation-level perspective taking through adaptive
+deception: during a simple game, the experimenter adapts its strategy
+(deceptive/non-deceptive behaviour) to the representation skills of its child
+opponent. The experimental setting is derived from the penny-hiding game
+protocol originally proposed by Oswald and Ollendick~\cite{oswald1989role} and
+replicated and extended by Baron-Cohen in~\cite{baron1992out}, who describes it
+as a two-person game in which the subject is actively involved, either as a
+guesser or as a hider. The hider hides the penny in one hand or the other, and
+then invites a guess. The game is repeated several time before switching the
+roles. Baron-Cohen proposes a specific index to rate the level of the players
+based on the idea of \emph{information occlusion}: minimally, the hider must
+ensure \emph{object occlusion} (the penny must not become visible to the
+guesser), while good hiders, with representation-level perspective taking
+skills, develop strategies (like random hand switching or deictic hints at the
+wrong hand) to prevent the guesser to find the penny (\emph{information
+occlusion}). One could imagine a similar protocol adapted to robotics:
+the robot would for instance play the role of the experimenter, adapting
+on-line its behaviour to what it understands of the perspective taking
+capabilities of the children, and would consequently require
+\emph{second-order}, \emph{representation-level} perspective taking from the
+robot.
+
+\begin{itemize}
+    \item Elephant mask
+    \item Chocolate Bar story (2nd order false belief) + 2nd order strategic
+        game~\cite{flobbe2008children}
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Acknowledgments}
