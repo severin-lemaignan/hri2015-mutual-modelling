@@ -564,37 +564,50 @@ cognition, which implies for instance limited rationality.
 Labuschagne in~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
 for modeling \emph{theory of mind} mechanisms.
 
-\section{What does that means for robotics?}
+
+\section{What does that mean to robotics?}
 
 Several lessons can be taken out of these four perspectives on mutual modelling.
 First, \textbf{concepts} and terminology stand out and social robotics would
-benefit of incorporating them. Second, \textbf{models} of mutual modelling exist that
-would make sense in robotics as well, along with investigation strategies and
-approaches that translate well to robotics. Finally, we believe that several
-\textbf{experimental settings} designed and successfully tested in other disciplines
-shape an interesting way forward for (experimental) social robotics.
+benefit of incorporating them. Second, \textbf{models} of mutual modelling exist
+that would make sense in robotics as well, along with investigation strategies
+and approaches that translate well to robotics. Finally, we believe that several
+\textbf{experimental settings} designed and successfully tested in other
+disciplines shape an interesting way forward for (experimental) social robotics.
 
 We summarize hereafter our main findings.
 
 \subsection{Concepts}
 
-\subsubsection{Classifying mutual modelling}
+Several concepts have been introduced that help with decomposing the broad idea
+of mutual modelling into better delimited research questions.
 
-\begin{itemize}
-    \item cognitive connections/mental representations
-    \item level 1/level 2
-    \item concept of \emph{superficial alignment} vs \emph{global alignment} or \emph{deep grounding}
-\end{itemize}
-
-
-\subsubsection{To what extent should we model the other?}
+Flavell's distinction between \emph{cognitive connections} on one hand, and
+\emph{mental representation} on the other hand helps for instance in recognizing
+the limits of perceptual perspective taking as currently achieved in robotics.
+And from an artificial intelligence perspective, this
+\emph{connection-representation} account indeed raises an interesting challenge:
+how to design a meta-representational system that supports and manipulates
+multiple cognitive connections \emph{and} representations?
 
 \emph{Modelling order}: 2nd order around 8~\cite{perner1988higher}
-concept of \emph{overall least collaborative effort}: misunderstanding should not be viewed as something to systematically
-        avoid (especially true for learning situations, but still applicable to
-        general interaction)
 
-concept of \emph{grounding criterion}
+The level of mutual modelling required for effective collaboration is another
+question that is relevant to human-robot interaction. Pickering and Garrod, with
+the idea of \emph{superficial alignment} versus \emph{global alignment} or
+\emph{deep grounding}, come to the conclusion that \emph{mimicking} behaviours
+is often a more efficient way to work together than establishing a full common
+ground, which is also expressed by Clark in terms of \emph{least collaborative
+effort} and Dillenbourg in terms of \emph{optimal collaborative effort}:
+misunderstandings should not be viewed as something to systematically avoid
+since the repair actions they may elicit can also be viewed as a way to engage
+the agents into new interactions. Clark and Dillenbourg developed this idea in
+the context of collaborative learning (where social interactions are designed to
+support learning), we believe it applies equally well to the context of
+human-robot interaction.  In that respect, Clark's concept of \emph{grounding
+criterion} provides a practical tool to represent and manipulate this idea of
+degree of shared understanding required by the agents to perform a given task .
+
 
 \subsection{Models and Approaches}
 
@@ -604,11 +617,14 @@ We have presented at section~\ref{formal-epistemology} the efforts already
 conducted in the field of formal epistemology to represent socio-cognitive
 capabilities (and in particular, the ones related to mutual modelling) as
 logical objects that can be reasoned about and manipulated. This mathematical
-objects are natural candidates for transposition into representational systems
-and controllers for robots, especially as an extensive literature on modal
-logics and their applicability to artificial agent already exist, in particular
-by Shapiro, Reiter and Levesque -- with Golog~\cite{levesque1997golog} and its
-derivatives. Herzig~\cite{herzig2014logics} provides a recent survey.
+objects, build upon different modal logics, are natural candidates for
+transposition into representational systems and controllers for robots,
+especially as an extensive literature on modal logics\fixme{Reiter -> situation
+    calculus. Not modal logics. Cf~\cite{ditmarsch2010from} for interactions
+between sitcal and dynamic epistemic logic} and their applicability to
+artificial agent already exist, in particular by Shapiro, Reiter and Levesque
+(the later with Golog~\cite{levesque1997golog} and its derivatives).
+Herzig~\cite{herzig2014logics} provides a recent survey.
 
 \subsubsection{Repairing misunderstandings}
 
@@ -622,6 +638,7 @@ derivatives. Herzig~\cite{herzig2014logics} provides a recent survey.
 The model presented at section~\ref{cscl-model}
 
 \subsection{Experimental settings and methodologies}
+\label{robotics-experiments}
 
 When reading literature on experimental research on autism, the apparent
 simplicity of the proposed protocols often striking. This experimental research
