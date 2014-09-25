@@ -547,22 +547,43 @@ to hold, and is naturally suited to build mathematical representations of
 situations such as ``\emph{the robot knows (the baby may not know what a power
 socket is)}''.
 
-Formal approaches to mutual modelling and theory of mind deals with
-agent-dependant representations of \emph{knowledge} (a prototypical
-\emph{meta-cognitive} skill) and are a refinement of \emph{epistemic modal
-logic}~\cite{hendricks2008epistemic}. Verbrugge proposes
-in~\cite{verbrugge2009logic} a survey of the state of the art in epistemic logic
-applied to \emph{social reasoning}, and he underlines both the limits of
-epistemic logic for that purpose (it assumes for instance $\mathsf{K}_{i\varphi}
-\rightarrow \mathsf{K}_{i}\mathsf{K}_{i\varphi}$, which reads ``$i$ knows
-$\varphi$'' implies ``$i$ knows that $i$ knows $\varphi$'', \ie $i$ can always
-introspect) and the recent advancement towards modeling \emph{human} social
-cognition, which implies for instance limited rationality.
+The \emph{epistemic modal logic} (see~\cite{hendricks2008epistemic} for an
+overview and references), in particular, focuses on the formal representation of
+knowledge and beliefs of agents, with the operators $\mathsf{K}_{i}\varphi$
+(epistemic operator: agent $i$ knows $\varphi$) and $\mathsf{B}_{i}\varphi$
+(doxatic operator: agent $i$ believes $\varphi$). Every possible logical
+propositions belong then to possible \emph{worlds} (noted $w$), that are
+\emph{accessible} (\ie compatible) or not to one's beliefs and knowledge.
 
+Single-agent systems can be extended to multi-agent systems (\cite[chapt.
+4]{fagin1995reasoning}) and if $p$ stands for ``the power socket is dangerous'',
+$\mathsf{K}_{mother}p \wedge \mathsf{K}_{mother}\neg\mathsf{K}_{baby}p$ states
+that the mother knows that the socket is dangerous, and also knows that the baby
+is not aware of this. This provides a formal tool to represent mutual models
+(the \emph{order} of mutual modelling as previously introduced is here directly
+related to the nesting depth of the epistemic operator), with concrete
+applications to the representation of knowledge dynamics in group such as the
+formal description of possible Cluedo strategies proposed by van
+Ditmarsch~\cite{ditmarsch2002description} or the analysis of mutual modelling in
+a strategic game with imperfect information (derived from Mastermind) proposed
+by Verbrugge and Mol~\cite{verbrugge2008learning}.
 
-\emph{Doxastic epistemic logic} proposed by van Ditmarsch and
-Labuschagne in~\cite{vanditmarsch2007beliefs} that has been shown to be suitable
-for modeling \emph{theory of mind} mechanisms.
+Verbrugge further investigates the social aspect in~\cite{verbrugge2009logic}
+and proposes a survey of epistemic logic applications to \emph{social
+reasoning}. He underlines both the limits of epistemic logic for that purpose
+(the common epistemic systems $\mathbf{S4}$ and $\mathbf{S5}$ assume for
+instance $\mathsf{K}_{i}\varphi \rightarrow
+\mathsf{K}_{i}\mathsf{K}_{i}\varphi$, which reads ``$i$ knows $\varphi$''
+implies ``$i$ knows that $i$ knows $\varphi$'', \ie $i$ can always introspect, a
+rather idealized model of human cognition) and the recent advancement towards
+modeling \emph{human} social cognition, which implies for instance limited
+rationality.  One of these attempts is formalized as a \emph{doxastic epistemic
+logic} by van Ditmarsch and Labuschagne in~\cite{ditmarsch2007beliefs}, with an
+explicit focus on modeling \emph{theory of mind} mechanisms. This model builds
+upon \emph{dynamic epistemic logic}~\cite{ditmarsch2007dynamic} (DEL), \ie
+epistemic logic augmented with mechanisms for knowledge changes, and the
+modelling of agents' degrees of belief.
+
 
 
 \section{What does that mean to robotics?}
