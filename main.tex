@@ -115,15 +115,15 @@ robotics, but reported implementation work was limited to simple perceptual
 precursors (like face detection or color saliencies detection). Since then,
 research in this field has been focused on applications relying on Flavell's
 \emph{Level 1}~\cite{flavell1977development} perspective-taking, \ie
-perspective-taking that only requires perceptual abilities ("\emph{I see (you do
-not see the book})"), and actually mostly limited to visual perception (relevant
+perspective-taking that only requires perceptual abilities (``\emph{I see (you do
+not see the book})''), and actually mostly limited to visual perception (relevant
 work include Breazeal~\cite{Breazeal2006}, Trafton~\cite{Trafton2005} and
 Ros~\cite{Ros2010}).
 
 \begin{figure}[h!t]
         \centering
         \includegraphics[width=0.7\linewidth]{sally_ann}
-        \caption{The false belief experiment: two puppets, ``Ann'' and
+        \caption{\small The false belief experiment: two puppets, ``Ann'' and
             ``Sally'' face each other, with two boxes between them. A child (the
             subject) observes. Ann puts a ball in the beige box and then leaves.
             While she is absent, Sally moves the ball to the blue box. Ann
@@ -136,8 +136,8 @@ Ros~\cite{Ros2010}).
         \label{false-beliefs}
 \end{figure}
 
-Based on perspective taking \emph{Level 1} alone, Breazeal et
-al.~\cite{breazeal2009embodied} and Warnier et al.~\cite{warnier2012when}
+Based on perspective taking \emph{Level 1} alone, Breazeal
+\etal\cite{breazeal2009embodied} and Warnier \etal\cite{warnier2012when}
 successfully tackled the classical hallmark of theory of mind, the false belief
 experiment (Figure~\ref{false-beliefs}, introduced by~\cite{wimmer1983beliefs},
 original experimental setting by~\cite{baron1985does}). They demonstrated
@@ -153,12 +153,41 @@ deeper, more
 intricate, levels of theory of mind may prove in reach. What about Flavell's
 \emph{Level 2} perspective-taking
 
+\fxfatal{Article overview}
+
 \section{Mutual Modelling and Developmental Psychology}
+
+\paragraph{Connections vs. representations}
+
+In~\cite{flavell1990developmental}, Flavell relates perspective taking
+\emph{Level 1} to establishing \emph{cognitive connections} (I see, I hear, I
+want, I like, I fear...), in contrast to perspective taking \emph{Level 2} that
+relates to manipulating \emph{representations}.  This is exemplified by the
+\emph{appearance-reality} tasks, like the \emph{elephant mask} experiment
+proposed in~\cite{flavell1990developmental}: 3-years old children are not able
+to tell that an experimenter hidden behind a large elephant mask but who speaks
+normally \emph{looks} like an elephant, \emph{sounds} like the experimenter, and
+\emph{really is} the experimenter.  It appears that, while children before 4
+years are able to explicitly manipulate cognitive connections (they know for
+instance that these are largely independent of each other and that they can
+evolve over time) and know as well that their own connections are independent of
+those of other people, they do not think that one concept can \emph{seriously}
+(\ie, non playfully) hold several, possibly conflicting, representations.
+
+This \emph{connection-representation} account appears to be an significant
+component of a general theory of mind (one need to recognize that the same
+object/concept may have different, serious, representations to then accept false
+beliefs for instance),
+
+%and, from an artificial intelligence perspective, raises
+%an interesting challenge: how to design a meta-representational system
+%that supports and manipulates multiple cognitive connections \emph{and}
+%representations?
 
 \begin{figure}
         \centering
         \includegraphics[width=0.9\columnwidth]{representation-perspective-taking}
-        \caption{\emph{Visual} perspectives allow for a first level of mutual
+        \caption{\small \emph{Visual} perspectives allow for a first level of mutual
             modelling. However, to correctly comprehend the scene,
             \emph{representation-level} perspective taking is required: what
             does the power socket means to the baby, what does the situation
@@ -167,10 +196,8 @@ intricate, levels of theory of mind may prove in reach. What about Flavell's
         \label{representation-level}
 \end{figure}
 
-While an important precursor, this does not address how the human
-\emph{represents} its environment (Flavell's Level 2) and hence understands it:
-Figure~\ref{representation-level} illustrates this difference between
-perspective-taking Levels 1 and 2 in an imaginary human-robot interaction
+Figure~\ref{representation-level} illustrates this difference between cognitive
+connections and representations in an imaginary human-robot interaction
 scenario. The \emph{visual} perspective of the baby and the mother are
 represented: a robot endowed with perspective-taking level 1 is able to compute
 that the baby looks at the plug and the mother looks at the baby.
@@ -186,48 +213,92 @@ actually lack a theory of mind and suggests this as the primary cause of their
 social impairments), and Frith and Happé further note in ~\cite{frith1994autism}
 that this specific deficit of autism has led to a large amount of research which
 proved, in turn, highly beneficial to the study of the development of theory of
-mind in general.
-
-Drawing from experimental research on autism, the next logical step is to look
-at other complex mind representations capabilities, what are the tasks
-exhibiting them, and how do they socially impair subjects who lack them.  Frith
-and Happé reference in~\cite{frith1994autism} 13 such tasks, identified during
+mind in general. They reference in~\cite{frith1994autism} 13 such tasks, identified during
 the study of social cognition by autistic children. Each of them is proposed in
 two versions: one does not require mentalizing, while the other does require it.
 One of these tasks, for example, required children to distinguish emotions,
 namely happy/sad faces on one hand (situation-based emotion), and surprised
 faces on the other (belief-based emotion)~\cite{baron1993children}.  Another
 task, based on the \emph{penny-hiding game}, contrasts the two conditions in
-terms of \emph{object occlusion} vs \emph{information
-occlusion}~\cite{baron1992out}. These tasks prototypically illustrate social
+terms of \emph{object occlusion} vs.~\emph{information
+occlusion}~\cite{baron1992out} (we detail it hereafter). These tasks prototypically illustrate social
 meta-cognition: one need to represent and reflect on someone else
 representations (and not only perceptions), and they are not addressed by
-today's research on social robots (we further discuss how relevant to robotics
-these tasks are in section~\ref{robotics-experiments}).
+today's research on social robots.
 
-This connects to Flavell's perspective taking levels:
-in~\cite{flavell1990developmental}, he relates perspective taking Level 1 to
-establishing \emph{cognitive connections} (I see, I hear, I want, I like, I
-fear...), in contrast to perspective taking Level 2 that relates to manipulating
-\emph{representations}.  This is exemplified by the \emph{appearance-reality}
-tasks, like the \emph{elephant mask} experiment proposed
-in~\cite{flavell1990developmental}: 3-years old children are not able to tell
-that an experimenter hidden behind a large elephant mask but who speaks normally
-\emph{looks} like an elephant, \emph{sounds} like the experimenter, and
-\emph{really is} the experimenter.  It appears that, while children before 4
-years are able to explicitly manipulate cognitive connections (they know for
-instance that these are largely independent of each other and that they can
-evolve over time) and know as well that their own connections are independent of
-those of other people, they do not think that one concept can \emph{seriously}
-(\ie, non playfully) hold several, possibly conflicting, representations.
+When reading literature on experimental research on autism, the apparent
+simplicity of the proposed protocols often striking. This experimental research
+is especially relevant to robotics because of the careful choice of interaction
+modalities: since autistic children frequently exhibit impairments beyond social
+ones (such as motor or linguistic ones), the experiments must be designed such
+that they require only basic cognitive skills besides the social abilities that
+are tested. The Sally and Anne task, for instance, requires the observing child
+to be able to visually follow the marble, to remember the true location of the
+marble, to understand simple questions (``Where will Sally look for her
+marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually to give
+an answer, either verbally or with a gesture. The two first premises are
+actually explicitely checked through questions: ``Where is the
+marble really?'' -- reality question -- and ``Where was the marble in the
+beginning?'' -- memory question.
 
-This \emph{connection-representation} account appears to be an significant
-component of a general theory of mind (one need to recognize that the same
-object/concept may have different, serious, representations to then accept false
-beliefs for instance), and, from an artificial intelligence perspective, raises
-an interesting challenge: how to design a meta-representational system
-that supports and manipulates multiple cognitive connections \emph{and}
-representations?
+Likewise, current social robots have limited cognitive skills (no fast yet fine
+motor skills, limited speech production and understanding, limited scene
+segmentation and object recognition capabilities, etc.) and such tasks
+that effectively test a single cognitive skill (in this case, mentalizing) in
+near isolation are of high interest for experimental social robotics.
+
+Frith and Happé have listed in~\cite{frith1994autism} eight tasks
+(Table~\ref{mentalizing-tasks} reproduces this list) that have been
+used in the literature to evidence the presence or absence of a theory of mind
+by children. This list is interesting in that it mirrors pairs of tasks: ones
+which do not require mentalizing with similar ones which do require mentalizing,
+thus providing control tasks.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{p{0.4\linewidth}p{0.5\linewidth}}
+        \toprule
+        No mentalizing required           & Mentalizing required          \\
+        \midrule
+        Ordering behavioural pictures     & Ordering mentalistic pictures~\cite{baron1986mechanical} \\
+        Understanding see                 & Understanding know~\cite{perner1989exploration}            \\
+        Protoimperative pointing          & Protodeclarative pointing~\cite{baron1989perceptual}     \\
+        Sabotage                          & Deception~\cite{sodian1992deception}                     \\
+        False photographs                 & False beliefs~\cite{leslie1992domain}                 \\
+        Recognizing happiness and sadness & Recognizing surprise~\cite{baron1993children}          \\
+        Object occlusion                  & Information occlusion~\cite{baron1992out}         \\
+        Literal expression                & Metaphorical expression~\cite{happe1993communicative}       \\
+        \bottomrule
+    \end{tabular}
+    \caption{\small Tasks requiring or not mentalizing to pass, listed by Frith and Happé in~\cite{frith1994autism}}
+    \label{mentalizing-tasks}
+\end{table}
+
+\emph{Object occlusion} vs.~\emph{Information occlusion} is one example of a
+(pair of) task(s) which evidence representation-level perspective taking through
+adaptive deception: during a simple game, the experimenter adapts its strategy
+(deceptive/non-deceptive behaviour) to the representation skills of its child
+opponent. The experimental setting is derived from the penny-hiding game
+protocol originally proposed by Oswald and Ollendick~\cite{oswald1989role} and
+replicated and extended by Baron-Cohen in~\cite{baron1992out}, who describes it
+as a two-person game in which the subject is actively involved, either as a
+guesser or as a hider. The hider hides the penny in one hand or the other, and
+then invites a guess. The game is repeated several time before switching the
+roles. Baron-Cohen proposes a specific index to rate the level of the players
+based on the idea of \emph{information occlusion}: minimally, the hider must
+ensure \emph{object occlusion} (the penny must not become visible to the
+guesser), while good hiders, with representation-level perspective taking
+skills, develop strategies (like random hand switching or deictic hints at the
+wrong hand) to prevent the guesser to find the penny (\emph{information
+occlusion}). One could imagine a similar protocol adapted to robotics: the robot
+would for instance play the role of the experimenter, adapting on-line its
+behaviour to what it understands of the perspective taking capabilities of the
+children, and would consequently require \emph{second-order},
+\emph{representation-level} perspective taking from the robot.
+
+
+
+\paragraph{Higer-order Theory of Mind}
 
 While a great deal of research concerns itself with \emph{first-order} theory of
 mind, \emph{higher-order} (and particularly, second-order) ToM are also studied.
@@ -247,26 +318,30 @@ assume others to have a second-order ToM, etc.
 
 Flobbe \etal propose in~\cite{flobbe2008children} a set of three tasks (a
 second-order false belief task, a strategic game and a sentence comprehension
-test) that require second-order mentalizing to succeed.\fixme{discuss that a bit}
-
-a second direction for the 'meta-cognitive foundations of mind modelling' is
-Leslie's paper on the role of pretense []. I still need to investigate it
-
-another paper of high relevance is by Frye et al. []: they use a computational
-metaphor to approach theory of mind, contrasting here also
-rule-based tasks with tasks requiring a theory of mind. I also need to
-investigate it further.
-
-Limits of ToM:
-\cite{keysar2003limits}: adults, even with working theory of mind, may prefer
-their own perspective and ignore the other perspective.
+test) that require second-order mentalizing to succeed.\fixme{present the
+chocolate bar task}
 
 Agreement is understood later than 2nd order ToM because it's recursive.
 \cite[p.~664]{verbrugge2009logic}.
 
+\paragraph{Pretense}
+
+a second direction for the 'meta-cognitive foundations of mind modelling' is
+Leslie's paper on the role of pretense []. I still need to investigate it
+
+\fixme{another paper of high relevance is by Frye et al. []: they use a computational
+metaphor to approach theory of mind, contrasting here also
+rule-based tasks with tasks requiring a theory of mind. I also need to
+investigate it further. For the formal epistemology section?}
+
+\fixme{Limits of ToM:
+\cite{keysar2003limits}: adults, even with working theory of mind, may prefer
+their own perspective and ignore the other perspective.}
+
+
 \section{Mutual Modelling in Psycholinguistics and Collaborative Learning}
 
-\subsection{Role and understanding of mutual modelling}
+\paragraph{Mutual modelling as a support for shared understanding}
 
 \emph{Computer Supported Collaborative Learning} (CSCL) researches the cognitive
 mechanisms and practical techniques underpinning efficient learning in social
@@ -286,15 +361,16 @@ years in psycholinguistics, under the  notion of ``grounding''\footnote{Note
 that the meaning of \emph{grounding} -- ensuring a shared understanding of a
 situation during an interaction -- that we employ in this article must be
 distinguished from its meaning in the context of \emph{symbol grounding} as
-defined by Harnad~\cite{harnad1990symbol}}~\cite{clark1986referring}.  However, the
-relevance of grounding mechanisms for explaining learning outcomes has been
-questioned in learning sciences. The monitoring and repair of mis-understanding
-explains for instance referential failures in short dialogue episodes but does
-hardly predict \emph{conceptual change} (\ie the acquisition, acceptation and
-integration into one's mental model of a new belief\fixme{check with Pierre})
-over longer sessions~\cite{dillenbourg2006sharing}. The cumulative effect of
-grounding episodes can probably be better understood from a socio-cultural
-perspective: \emph{``collaborative learning is associated with the increased
+defined by Harnad~\cite{harnad1990symbol}}~(Clark,
+in~\cite{clark1986referring}).  However, the relevance of grounding mechanisms
+for explaining learning outcomes has been questioned in learning sciences. The
+monitoring and repair of mis-understanding explains for instance referential
+failures in short dialogue episodes but does hardly predict \emph{conceptual
+change} (\ie the acquisition, acceptation and integration into one's mental
+model of a new belief\fixme{check with Pierre}) over longer
+sessions~\cite{dillenbourg2006sharing}. The cumulative effect of grounding
+episodes can probably be better understood from a socio-cultural perspective:
+\emph{``collaborative learning is associated with the increased
 cognitive-interactional effort involved in the transition from learning to
 understand each other to learning to understand the meanings of the semiotic
 tools that constitute the mediators of interpersonal
@@ -317,11 +393,12 @@ that this local alignment may -- in some cases -- lead to a \emph{global
 alignment} of the semantic level (\emph{deep grounding}).  For these authors,
 the convergence in dialogue, and even the repair of some misunderstandings, is
 explained by this mimetic behavior more than by a monitoring of each other's
-knowledge: ``...interlocutors do not need to monitor and develop full common
+knowledge: \emph{``...interlocutors do not need to monitor and develop full common
 ground as a regular, constant part of routine conversation, as it would be
 unnecessary and far too costly. Establishment of full common ground is, we
 argue, a specialized and non-automatic process that is used primarily in times
-of difficulty (when radical misalignment becomes apparent).'' This view is
+of difficulty (when radical misalignment becomes
+apparent).''}~\cite{pickering2006alignment} This view is
 actually not incompatible with Clark's \emph{grounding
 criterion}~\cite{clark1989contributing}: the degree of shared understanding that
 peers need to reach depends upon the task they perform. For instance, a dialogue
@@ -356,15 +433,17 @@ stress that misunderstanding should not be viewed as something to be avoided (if
 this was possible), but as an opportunity to engage into verbalization,
 explanation, negotiation, and so forth.
 
-\subsection{A notation for mutual modelling}
+\paragraph{CSCL model of mutual modelling}
 \label{cscl-model}
 
 Dillenbourg proposes in~\cite{sangin2007partner} a model to represent mutual
 modelling situations. He uses the notation \model{A}{B}{X} to denote ``$A$ knows
-that $B$ knows $X$''. This notation does not mean $A$ has an explicit,
-monolithic representation of $B$: it must be understood as an abstraction
-referring to complex socio-cognitive processes. Besides, he refer to the
-\emph{degree of accuracy} of the model as \Model{A}{B}{X}.
+that $B$ knows $X$'' (equivalent to the epistemic logic notation
+$\mathsf{K}_{A}\mathsf{K}_{B}X$ that we present in the next section). This
+notation does not mean $A$ has an explicit, monolithic representation of $B$: it
+must be understood as an abstraction referring to complex socio-cognitive
+processes. Besides, he refer to the \emph{degree of accuracy} of the model as
+\Model{A}{B}{X}.
 
 He parametrizes and assesses the mutual modelling effort through 3 variables:
 
@@ -394,14 +473,13 @@ He parametrizes and assesses the mutual modelling effort through 3 variables:
 
 \end{enumerate}
 
-These notations lead to simple initial representations of mutual modelling
-during interactions.
-
-In order to make it meaningful in the context of HRI, we hereafter use $H$ to
-denote a human, while $R$ stands for a robot. Figure~\ref{mm_symmetry} then
-represents a dyadic human-robot interaction, with $\Delta_1$ illustrating what
-Dillenbourg calls the \emph{symmetry} question ({\it is the accuracy of my model
-related or not to the accuracy of your model?}).
+These notations lead to simple representations of mutual modelling during
+interactions, and Dillenbourg derives several questions out of this model.
+Adapted to a human-robot interaction situation, Figure~\ref{mm_symmetry}
+represents for instance a dyadic interaction (we hereafter use $H$ to denote a
+human, while $R$ stands for a robot). $\Delta_1$ illustrates what Dillenbourg
+calls the \emph{symmetry} question ({\it is the accuracy of my model related or
+not to the accuracy of your model?}).
 
 \begin{figure}[htb]
 \centering
@@ -418,7 +496,7 @@ related or not to the accuracy of your model?}).
 
 \end{tikzpicture}
 
-\caption{Mutual modelling in a dyadic interaction, $\Delta_1 =
+\caption{\small Mutual modelling in a dyadic interaction, $\Delta_1 =
     \Delta(\mathcal{M}^{\circ} (H,R,X),
 \mathcal{M}^{\circ} (R,H,X))$}
 
@@ -428,8 +506,13 @@ related or not to the accuracy of your model?}).
 
 With triads (two humans $H_1$ and $H_2$ and a robot $R$), we may compute the
 accuracy of 6 models \Model{H_1}{H_2}{X}, \Model{H_2}{H_1}{X},
-\Model{H_1}{R}{X}, \Model{R}{H_1}{X}, \Model{R}{H_2}{X} and \Model{H_2}{R}{X}
-(Figure~\ref{mm_triangles}).
+\Model{H_1}{R}{X}, \Model{R}{H_1}{X}, \Model{R}{H_2}{X} and \Model{H_2}{R}{X}.
+
+This leads to two \emph{triangle questions} relevant ot HRI (Figure~\ref{mm_triangles}): Do $H_1$ and $H_2$ have the same
+accuracy when modelling the robot $R$? ($\Delta_2 = \Delta(\M{H_1}{R}{X},
+\M{H_2}{R}{X})$), and conversely, what may lead $R$ to model more accurately
+$H_1$ or $H_2$? ($\Delta_3 = \Delta(\M{R}{H_1}{X}, \M{R}{H_2}{X})$).
+
 
 \begin{figure}[htb]
 \centering
@@ -464,17 +547,10 @@ accuracy of 6 models \Model{H_1}{H_2}{X}, \Model{H_2}{H_1}{X},
 
     \end{tikzpicture}
 }
-\caption{Mutual modelling in a triadic interaction}
+\caption{\small Mutual modelling in a triadic interaction}
 
 \label{mm_triangles}
 \end{figure}
-
-This leads to two \emph{triangle questions} : Do $H_1$ and $H_2$ have the same
-accuracy when modelling the robot $R$? ($\Delta_2 = \Delta(\M{H_1}{C}{X},
-\M{H_2}{C}{X})$), and conversely, what may lead $R$ to model more accurately
-$H_1$ or $H_2$?
-
-($\Delta_3 = \Delta(\M{C}{H_1}{X}, \M{C}{H_2}{X})$).
 
 Finally, Dillenbourg also suggests a \emph{rectangle question}: how self- versus
 other modelling compares ($\Delta_4$ in Figure~\ref{mm_rectangle})? This gives
@@ -499,60 +575,59 @@ Figure~\ref{mm_rectangle}).
 
 \end{tikzpicture}
 
-\caption{Meta-cognitive skills and domain-dependent modelling}
+\caption{\small Meta-cognitive skills and domain-dependent modelling}
 
 \label{mm_rectangle}
 \end{figure}
 
 This model, designed in the context of human collaboration, 
-evidences questions that are certainly relevant to human-robot interactions.
+evidences questions that are relevant as well to human-robot interactions.
 
-\begin{figure}
-        \centering
-        \setlength{\columnsep}{0.1cm}
-        \begin{multicols}{2}
-            \includegraphics[width=1.0\columnwidth]{triadic_false_beliefs.pdf}
+%
+%\begin{figure}
+%        \centering
+%        \setlength{\columnsep}{0.1cm}
+%        \begin{multicols}{2}
+%            \includegraphics[width=1.0\columnwidth]{triadic_false_beliefs.pdf}
+%
+%            \resizebox{\columnwidth}{!}{
+%            \begin{tikzpicture}[
+%                    >=latex,
+%                scale=0.5]
+%
+%                \draw(0,2) node (A) {\scriptsize Sally};
+%                \draw(0,-2) node (B) {\scriptsize Ann};
+%                \draw(10,0) node (C) {\scriptsize robot};
+%
+%                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
+%                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
+%                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
+%                \draw[->,very thick] (A) to (C);
+%                \draw[->,very thick] (B) to (C);
+%
+%
+%                \draw(0,-4) node (A) {\scriptsize Sally};
+%                \draw(0,-8) node (B) {\scriptsize Ann};
+%                \draw(10,-6) node (C) {\scriptsize robot};
+%
+%                \draw(5,-4) node {\scriptsize \Model{R}{ Sally}{ X}};
+%                \draw(5,-8) node {\scriptsize \Model{R}{ Ann}{ X}};
+%                \draw[dashed, <->] (3,-5.2) -- (3,-7.2) node[midway, sloped, above]
+%                {$\Delta_3$};
+%                \draw[<-,very thick] (A) to (C);
+%                \draw[<-,very thick] (B) to (C);
+%
+%            \end{tikzpicture}
+%            }
+%        \end{multicols}
+%
+%    \caption{blabla}
+%    \label{}
+%\end{figure}
 
-            \resizebox{\columnwidth}{!}{
-            \begin{tikzpicture}[
-                    >=latex,
-                scale=0.5]
+\fixme{Discuss experimental settings in CSCL?}
 
-                \draw(0,2) node (A) {\scriptsize Sally};
-                \draw(0,-2) node (B) {\scriptsize Ann};
-                \draw(10,0) node (C) {\scriptsize robot};
-
-                \draw(5,2) node {\scriptsize \Model{Sally}{ R}{ X}};
-                \draw(5,-2) node {\scriptsize \Model{Ann}{ R}{ X}};
-                \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
-                \draw[->,very thick] (A) to (C);
-                \draw[->,very thick] (B) to (C);
-
-
-                \draw(0,-4) node (A) {\scriptsize Sally};
-                \draw(0,-8) node (B) {\scriptsize Ann};
-                \draw(10,-6) node (C) {\scriptsize robot};
-
-                \draw(5,-4) node {\scriptsize \Model{R}{ Sally}{ X}};
-                \draw(5,-8) node {\scriptsize \Model{R}{ Ann}{ X}};
-                \draw[dashed, <->] (3,-5.2) -- (3,-7.2) node[midway, sloped, above]
-                {$\Delta_3$};
-                \draw[<-,very thick] (A) to (C);
-                \draw[<-,very thick] (B) to (C);
-
-            \end{tikzpicture}
-            }
-        \end{multicols}
-
-    \caption{blabla}
-    \label{}
-\end{figure}
-
-\subsection{Examples of experimental settings}
-
-\section{Two more perspectives}
-
-\subsection{Mutual Modelling in Neurosciences}
+\section{Mutual Modelling in Neurosciences}
 
 \begin{itemize}
     \item models?
@@ -560,7 +635,7 @@ evidences questions that are certainly relevant to human-robot interactions.
 \end{itemize}
 
 
-\subsection{Formal Epistemology}
+\section{Formal Epistemology}
 \label{formal-epistemology}
 
 \emph{Modal logics} look at the formal representation of \emph{possible
@@ -577,24 +652,27 @@ knowledge and beliefs of agents, with the operators $\mathsf{K}_{i}\varphi$
 propositions belong then to possible \emph{worlds} (noted $w$), that are
 \emph{accessible} (\ie compatible) or not to one's beliefs and knowledge.
 
-Single-agent systems can be extended to multi-agent systems (\cite[chapt.
-4]{fagin1995reasoning}) and if $p$ stands for ``the power socket is dangerous'',
+Single-agent epistemic systems can naturally extend to multi-agent systems~\cite[chapt.
+4]{fagin1995reasoning}: if $p$ stands for ``the power socket is dangerous'',
 $\mathsf{K}_{mother}p \wedge \mathsf{K}_{mother}\neg\mathsf{K}_{baby}p$ states
 that the mother knows that the socket is dangerous, and also knows that the baby
 is not aware of this. This provides a formal tool to represent mutual models
-(the \emph{order} of mutual modelling as previously introduced is here directly
-related to the nesting depth of the epistemic operator), with concrete
-applications to the representation of knowledge dynamics in group such as the
-formal description of possible Cluedo strategies proposed by van
-Ditmarsch~\cite{ditmarsch2002description} or the analysis of mutual modelling in
-a strategic game with imperfect information (derived from Mastermind) proposed
-by Verbrugge and Mol~\cite{verbrugge2008learning}.
+(the \emph{order} of mutual modelling as discussed in the context of
+developmental psychology is here directly
+related to the nesting depth of the epistemic operator).
 
-Verbrugge further investigates the social aspect in~\cite{verbrugge2009logic}
-and proposes a survey of epistemic logic applications to \emph{social
-reasoning}. He underlines both the limits of epistemic logic for that purpose
-(the common epistemic systems $\mathbf{S4}$ and $\mathbf{S5}$ assume for
-instance $\mathsf{K}_{i}\varphi \rightarrow
+This approach has led to applications to the representation of knowledge
+dynamics on concrete, ableit arguably toy, scenarios: van Ditmarsch presents for
+instance in~\cite{ditmarsch2002description} the formal description of possible
+Cluedo strategies based on what players know about other players' knowledge;
+Verbrugge and Mol analyse mutual modelling in a strategic game with imperfect
+information (derived from Mastermind) in~\cite{verbrugge2008learning}.
+
+Verbrugge further investigates the social aspect of epistemic logics
+in~\cite{verbrugge2009logic} and proposes a survey of epistemic logic
+applications to \emph{social reasoning}. He underlines both the limits of
+epistemic logic for that purpose (the common epistemic systems $\mathbf{S4}$ and
+$\mathbf{S5}$ assume for instance $\mathsf{K}_{i}\varphi \rightarrow
 \mathsf{K}_{i}\mathsf{K}_{i}\varphi$, which reads ``$i$ knows $\varphi$''
 implies ``$i$ knows that $i$ knows $\varphi$'', \ie $i$ can always introspect, a
 rather idealized model of human cognition) and the recent advancement towards
@@ -602,13 +680,40 @@ modeling \emph{human} social cognition, which implies for instance limited
 rationality.  One of these attempts is formalized as a \emph{doxastic epistemic
 logic} by van Ditmarsch and Labuschagne in~\cite{ditmarsch2007beliefs}, with an
 explicit focus on modeling \emph{theory of mind} mechanisms. This model builds
-upon \emph{dynamic epistemic logic}~\cite{ditmarsch2007dynamic} (DEL), \ie
-epistemic logic augmented with mechanisms for knowledge changes, and the
-modelling of agents' degrees of belief.
+upon \emph{dynamic epistemic logic}~\cite{ditmarsch2007dynamic} (DEL, epistemic
+logics augmented with mechanisms for knowledge changes), and the
+modelling of agents' degrees of belief through a \emph{preference} accessibility
+relation.
+
+The mathematical objects build from these different modal logics, are natural
+candidates for transposition into representational systems and controllers for
+robots. Historically in robotics, the main research perspective has been towards
+the \emph{action logics}, and in particular the influential \emph{situation
+calculus} (a propositional logic initially proposed by McCarthy, and fully
+axiomatized in the context of robotics by Levesque \etal
+in~\cite{levesque1998foundations}, which led to the {\sc golog} logic
+programming language~\cite{levesque1997golog}).  Many other action logics have
+been proposed including modal logics like PDL (\emph{Propositional Dynamic
+Logic}).
+
+Recent efforts have focused on bridging action logics (that deal with
+\emph{ontic} actions, \ie actions which have tangible, physical consequences)
+with epistemic logics (that deal with \emph{epistemic} actions, \ie knowledge
+changes). Van Ditmarsch proposes in~\cite{ditmarsch2010from} for instance a
+solution to embed a practical subset of situation calculus into a dynamic
+epistemic logic, and Herzig provides in~\cite{herzig2014logics} a broader
+overview of the interplay between current action and epistemic logics.
+
+From a practical perspective however, implementations of these logics into
+practical reasoners or programming languages remain rare. The development of
+\emph{Description Logics} (DL) in the knowledge representation community, along
+with effective, practical tools (like reasoners) is a possible path forward,
+since DL semantics overlap to some extend with modal logics~\cite[chap.
+4.2.2]{baader2003description}, and \emph{Description Logics} have already been
+successfully used in robotics (see~\cite{lemaignan2012symbolic} for a review).
 
 
-
-\section{What does that mean to robotics?}
+\section{Conclusion: Towards socio-cognitive robotics}
 
 Several lessons can be taken out of these four perspectives on mutual modelling.
 First, \textbf{concepts} and terminology stand out and social robotics would
@@ -617,8 +722,6 @@ that would make sense in robotics as well, along with investigation strategies
 and approaches that translate well to robotics. Finally, we believe that several
 \textbf{experimental settings} designed and successfully tested in other
 disciplines shape an interesting way forward for (experimental) social robotics.
-
-We summarize hereafter our main findings.
 
 \subsection{Concepts}
 
@@ -651,119 +754,13 @@ human-robot interaction.  In that respect, Clark's concept of \emph{grounding
 criterion} provides a practical tool to represent and manipulate this idea of
 degree of shared understanding required by the agents to perform a given task.
 
-
-\subsection{Models and Approaches}
-
-\subsubsection{The formal proposition of modal logics}
-
-We have presented at section~\ref{formal-epistemology} the efforts already
-conducted in the field of formal epistemology to represent socio-cognitive
-capabilities (and in particular, the ones related to mutual modelling) as
-logical objects that can be reasoned about and manipulated. This mathematical
-objects, build upon different modal logics, are natural candidates for
-transposition into representational systems and controllers for robots,
-especially as an extensive literature on modal logics\fixme{Reiter -> situation
-    calculus. Not modal logics. Cf~\cite{ditmarsch2010from} for interactions
-between sitcal and dynamic epistemic logic} and their applicability to
-artificial agent already exist, in particular by Shapiro, Reiter and Levesque
-(the later with Golog~\cite{levesque1997golog} and its derivatives).
-Herzig~\cite{herzig2014logics} provides a recent survey.
-
-\subsubsection{Repairing misunderstandings}
-
-\begin{itemize}
-    \item mimetism can be a more efficient repair strategy than full grounding
-    \item repair strategies
-\end{itemize}
-
-\subsubsection{From mutual modelling to interaction modelling}
-
-The model presented at section~\ref{cscl-model}
-
-\subsection{Experimental settings and methodologies}
-\label{robotics-experiments}
-
-When reading literature on experimental research on autism, the apparent
-simplicity of the proposed protocols often striking. This experimental research
-is especially relevant to robotics because of the careful choice of interaction
-modalities: since autistic children frequently exhibit impairments beyond social
-ones (such as motor or linguistic ones), the experiments must be designed such
-that they require only basic cognitive skills besides the social abilities that
-are tested. The Sally and Anne task, for instance, requires the observing child
-to be able to visually follow the marble, to remember the true location of the
-marble, to understand simple questions (``Where will Sally look for her
-marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually to give
-an answer, either verbally or with a gesture (the two first premises being
-actually checked through explicit questions: ``Where is the
-marble really?'' -- reality question -- and ``Where was the marble in the
-beginning?'' -- memory question).
-
-Likewise, current social robots have limited cognitive skills (no fast yet fine
-motor skills, limited speech production and understanding, limited scene
-segmentation and object recognition capabilities, etc.) and such tasks
-that effectively test a single cognitive skill (in this case, mentalizing) in
-near isolation are of high interest for experimental social robotics.
-
-Frith and Happé have listed in~\cite{frith1994autism} eight tasks
-(Table~\ref{mentalizing-tasks} reproduces this list) that have been
-used in the literature to evidence the presence or absence of a theory of mind
-by children. This list is interesting in that it mirrors pairs of tasks: ones
-which do not require mentalizing with similar ones which do require mentalizing,
-thus providing control tasks.
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{p{0.4\linewidth}p{0.5\linewidth}}
-        \toprule
-        No mentalizing required           & Mentalizing required          \\
-        \midrule
-        Ordering behavioural pictures     & Ordering mentalistic pictures~\cite{baron1986mechanical} \\
-        Understanding see                 & Understanding know~\cite{perner1989exploration}            \\
-        Protoimperative pointing          & Protodeclarative pointing~\cite{baron1989perceptual}     \\
-        Sabotage                          & Deception~\cite{sodian1992deception}                     \\
-        False photographs                 & False beliefs~\cite{leslie1992domain}                 \\
-        Recognizing happiness and sadness & Recognizing surprise~\cite{baron1993children}          \\
-        Object occlusion                  & Information occlusion~\cite{baron1992out}         \\
-        Literal expression                & Metaphorical expression~\cite{happe1993communicative}       \\
-        \bottomrule
-    \end{tabular}
-    \caption{Tasks requiring or not mentalizing to pass, listed by Frith and Happé in~\cite{frith1994autism}}
-    \label{mentalizing-tasks}
-\end{table}
-
-Object occlusion vs Information occlusion is one example of a (pair of) task(s)
-which evidence representation-level perspective taking through adaptive
-deception: during a simple game, the experimenter adapts its strategy
-(deceptive/non-deceptive behaviour) to the representation skills of its child
-opponent. The experimental setting is derived from the penny-hiding game
-protocol originally proposed by Oswald and Ollendick~\cite{oswald1989role} and
-replicated and extended by Baron-Cohen in~\cite{baron1992out}, who describes it
-as a two-person game in which the subject is actively involved, either as a
-guesser or as a hider. The hider hides the penny in one hand or the other, and
-then invites a guess. The game is repeated several time before switching the
-roles. Baron-Cohen proposes a specific index to rate the level of the players
-based on the idea of \emph{information occlusion}: minimally, the hider must
-ensure \emph{object occlusion} (the penny must not become visible to the
-guesser), while good hiders, with representation-level perspective taking
-skills, develop strategies (like random hand switching or deictic hints at the
-wrong hand) to prevent the guesser to find the penny (\emph{information
-occlusion}). One could imagine a similar protocol adapted to robotics:
-the robot would for instance play the role of the experimenter, adapting
-on-line its behaviour to what it understands of the perspective taking
-capabilities of the children, and would consequently require
-\emph{second-order}, \emph{representation-level} perspective taking from the
-robot.
-
-\begin{itemize}
-    \item Chocolate Bar story (2nd order false belief) + 2nd order strategic
-        game + speech understanding~\cite{flobbe2008children}
-\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Acknowledgments}
-
-This research was supported by the Swiss National Science Foundation through the
-National Centre of Competence in Research Robotics.
+% Hidden for double blind review
+%\section*{Acknowledgments}
+%
+%This research was supported by the Swiss National Science Foundation through the
+%National Centre of Competence in Research Robotics.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
