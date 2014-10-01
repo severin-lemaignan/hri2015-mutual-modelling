@@ -174,10 +174,10 @@ look at the philosophy of the mind and the logical tools of \emph{formal
 epistemology}: their use of modal logics to describe complex knowledge
 manipulation in groups is likely a rewarding direction for robotics to explore.
 
-\fixme{...
-To prevent this article to be a ``catch-all'' of ...
-Conceptual connections between these fields are numerous, we try to underline
-them}
+
+Conceptual bridges between these approaches are numerous, and our aim is here to
+draw a picture of the field that lay the bases for the further advancement of
+cognitive robotics in a social environment.
 
 \section{Mutual Modelling and Developmental Psychology}
 
@@ -237,22 +237,22 @@ actually lack a theory of mind and suggests this as the primary cause of their
 social impairments), and Frith and Happé further note in ~\cite{frith1994autism}
 that this specific deficit of autism has led to a large amount of research which
 proved, in turn, highly beneficial to the study of the development of theory of
-mind in general. They reference in~\cite{frith1994autism} 13 such tasks, identified during
-the study of social cognition by autistic children. Each of them is proposed in
-two versions: one does not require mentalizing, while the other does require it.
-One of these tasks, for example, required children to distinguish emotions,
-namely happy/sad faces on one hand (situation-based emotion), and surprised
-faces on the other (belief-based emotion)~\cite{baron1993children}.  Another
-task, based on the \emph{penny-hiding game}, contrasts the two conditions in
-terms of \emph{object occlusion} vs.~\emph{information
-occlusion}~\cite{baron1992out} (we detail it hereafter). These tasks prototypically illustrate social
-meta-cognition: one need to represent and reflect on someone else
-representations (and not only perceptions), and they are not addressed by
-today's research on social robots.
+mind in general. They reference in~\cite{frith1994autism} eight such tasks
+(Table~\ref{mentalizing-tasks}),
+identified during the study of social cognition by autistic children. Each of
+them is proposed in two versions: one does not require mentalizing, while the
+other does require it.  One of these tasks, for example, required children to
+distinguish emotions, namely happy/sad faces on one hand (situation-based
+emotion), and surprised faces on the other (belief-based
+emotion)~\cite{baron1993children}.  Another task, based on the
+\emph{penny-hiding game}, contrasts the two conditions in terms of \emph{object
+occlusion} vs.~\emph{information occlusion}~\cite{baron1992out} (we detail it
+hereafter). These tasks prototypically illustrate social meta-cognition: one
+need to represent and reflect on someone else representations (and not only
+perceptions), and they are not addressed by today's research on social robots.
 
-When reading literature on experimental research on autism, the apparent
-simplicity of the proposed protocols often striking. This experimental research
-is especially relevant to robotics because of the careful choice of interaction
+Experimental protocols in research on autism are often striking by their
+apparent straightforwardness because of the careful choice of interaction
 modalities: since autistic children frequently exhibit impairments beyond social
 ones (such as motor or linguistic ones), the experiments must be designed such
 that they require only basic cognitive skills besides the social abilities that
@@ -261,22 +261,15 @@ to be able to visually follow the marble, to remember the true location of the
 marble, to understand simple questions (``Where will Sally look for her
 marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually to give
 an answer, either verbally or with a gesture. The two first premises are
-actually explicitely checked through questions: ``Where is the
-marble really?'' -- reality question -- and ``Where was the marble in the
-beginning?'' -- memory question.
+actually explicitely checked through questions: ``Where is the marble really?''
+-- reality question -- and ``Where was the marble in the beginning?'' -- memory
+question.
 
 Likewise, current social robots have limited cognitive skills (no fast yet fine
 motor skills, limited speech production and understanding, limited scene
 segmentation and object recognition capabilities, etc.) and such tasks
 that effectively test a single cognitive skill (in this case, mentalizing) in
 near isolation are of high interest for experimental social robotics.
-
-Frith and Happé have listed in~\cite{frith1994autism} eight tasks
-(Table~\ref{mentalizing-tasks} reproduces this list) that have been
-used in the literature to evidence the presence or absence of a theory of mind
-by children. This list is interesting in that it mirrors pairs of tasks: ones
-which do not require mentalizing with similar ones which do require mentalizing,
-thus providing control tasks.
 
 \begin{table}[h]
     \centering
@@ -298,31 +291,35 @@ thus providing control tasks.
     \label{mentalizing-tasks}
 \end{table}
 
-\emph{Object occlusion} vs.~\emph{Information occlusion} is one example of a
-(pair of) task(s) which evidence representation-level perspective taking through
-adaptive deception: during a simple game, the experimenter adapts its strategy
-(deceptive/non-deceptive behaviour) to the representation skills of its child
-opponent. The experimental setting is derived from the penny-hiding game
-protocol originally proposed by Oswald and Ollendick~\cite{oswald1989role} and
-replicated and extended by Baron-Cohen in~\cite{baron1992out}, who describes it
-as a two-person game in which the subject is actively involved, either as a
-guesser or as a hider. The hider hides the penny in one hand or the other, and
-then invites a guess. The game is repeated several time before switching the
-roles. Baron-Cohen proposes a specific index to rate the level of the players
-based on the idea of \emph{information occlusion}: minimally, the hider must
-ensure \emph{object occlusion} (the penny must not become visible to the
-guesser), while good hiders, with representation-level perspective taking
-skills, develop strategies (like random hand switching or deictic hints at the
-wrong hand) to prevent the guesser to find the penny (\emph{information
-occlusion}). One could imagine a similar protocol adapted to robotics: the robot
-would for instance play the role of the experimenter, adapting on-line its
-behaviour to what it understands of the perspective taking capabilities of the
-children, and would consequently require \emph{second-order},
-\emph{representation-level} perspective taking from the robot.
+Frith and Happé's list (Table~\ref{mentalizing-tasks}) is in that regard
+especially interesting in that it mirrors pairs of tasks: ones which do not
+require mentalizing with similar ones which do require mentalizing, thus
+providing control tasks.  \emph{Object occlusion} vs.~\emph{Information
+occlusion} is one example of a (pair of) task(s) which evidence
+representation-level perspective taking through adaptive deception: during a
+simple game, the experimenter adapts its strategy (deceptive/non-deceptive
+behaviour) to the representation skills of its child opponent. The experimental
+setting is derived from the penny-hiding game protocol originally proposed by
+Oswald and Ollendick~\cite{oswald1989role} and replicated and extended by
+Baron-Cohen in~\cite{baron1992out}, who describes it as a two-person game in
+which the subject is actively involved, either as a guesser or as a hider. The
+hider hides the penny in one hand or the other, and then invites a guess. The
+game is repeated several time before switching the roles. Baron-Cohen proposes a
+specific index to rate the level of the players based on the idea of
+\emph{information occlusion}: minimally, the hider must ensure \emph{object
+occlusion} (the penny must not become visible to the guesser), while good
+hiders, with representation-level perspective taking skills, develop strategies
+(like random hand switching or deictic hints at the wrong hand) to prevent the
+guesser to find the penny (\emph{information occlusion}). One could imagine a
+similar protocol adapted to robotics: the robot would for instance play the role
+of the experimenter, adapting on-line its behaviour to what it understands of
+the perspective taking capabilities of the children, and would consequently
+require \emph{second-order}, \emph{representation-level} perspective taking from
+the robot.
 
 
 
-\paragraph{Higer-order Theory of Mind}
+\paragraph{Higher-order Theory of Mind}
 
 While a great deal of research concerns itself with \emph{first-order} theory of
 mind, \emph{higher-order} (and particularly, second-order) ToM are also studied.
@@ -342,11 +339,46 @@ assume others to have a second-order ToM, etc.
 
 Flobbe \etal propose in~\cite{flobbe2008children} a set of three tasks (a
 second-order false belief task, a strategic game and a sentence comprehension
-test) that require second-order mentalizing to succeed.\fixme{present the
-chocolate bar task}
+test) that require second-order mentalizing to succeed. The second-order false
+belief task that they propose (known as the \emph{Chocolate bar task})
+effectively evidence higher-order ToM:
+\begin{quote}
+John and Mary are in the living room when their mother returns home with a
+chocolate bar that she bought. Mother gives the chocolate to John, who puts it
+into the drawer. After John has left the room, Mary hides the chocolate in the
+toy chest. But John accidentally sees Mary putting the chocolate into the toy
+chest. Crucially, Mary does not see John. When John returns to the living room,
+he wants to get his chocolate.
+\end{quote}
 
-Agreement is understood later than 2nd order ToM because it's recursive.
-\cite[p.~664]{verbrugge2009logic}.
+Flobbe then asks the subjects: \emph{``Where is the chocolate now?''} (reality
+control question), \emph{``Does John know that Mary has hidden the chocolate in
+the toy chest?''} (first-order ignorance question), \emph{``Does Mary know that
+John saw her hide the chocolate?''} (linguistic control question), and
+\emph{``Where does Mary think that John will look for the chocolate?''}
+(second-order false belief question). Besides, Flobbe asks the participants to
+justify their answer (\emph{``Why does she think that?''}). In her study, 82\%
+of a group of 40 children (MD=9 year old) successfully passed the task.
+
+While literature on higher-order of mutual modelling is scarce, \emph{agreement}
+and \emph{common belief} is another interesting social situation:
+Verbrugge~\cite[p.~664]{verbrugge2009logic} reports after an experiment by Mant
+and Perner~\cite{mant1988child} where a child is disappointed by his father who
+changed the announced plan to go swimming. In one condition, the child and the
+father had previously mutually agreed, while in the other, no explicit agreement
+:took place (to a child observer, it actually appears that the situation is
+\textbf{worse} if the child and the father \textbf{did not} previously
+explicitely agreed). Children before ten do not
+distinguish between the two conditions, and Verbrugge's proposed explanation
+relies on the concept of \emph{social commitment}, which implies
+the \emph{common belief} between the two agent that the father \emph{intends} to
+go swimming and the child is \emph{interested} in going swimming.
+
+Common belief (``we believe that we believe that we believe that... we agreed'') is
+defined in epistemic logic (see section~\ref{formal-epistemology}) as an infinite
+recursion ($\infty$-order ToM), and Verbrugge suggests that this mutual
+modelling mechanism is therefore harder to master than 2nd-order ToM for
+instance.
 
 \paragraph{Pretense}
 
