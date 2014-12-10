@@ -40,30 +40,25 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-%(DH) is it too soon to claim learning by teaching benefits in the title...? 
-%(DH) the paper is not about "learning handwriting", it's about the robot.
 \title{\LARGE \bf
 Mutual Modelling in Robotics: \\Inspirations for the Next Steps
 }
 
-% \numberofauthors{3} 
-% \author{
-% \alignauthor
-% Séverin Lemaignan\\
-% Pierre Dillenbourg\\
-%    \affaddr{Computer-Human Interaction in Learning and Instruction Laboratory (CHILI)}\\
-%    \affaddr{École Polytechnique Fédérale\\ de Lausanne (EPFL)}\\
-%    \affaddr{CH-1015 Lausanne, Switzerland}\\
-%    \email{firstname.lastname@epfl.ch}
-% \alignauthor
-% Claire Braboszcz\\
-%    \affaddr{Laboratory for Neurology \& \\Imaging of Cognition (LabNIC)}\\
-%    \affaddr{University of Geneva}\\
-%    \affaddr{CH-1211 Geneva, Switzerland}\\
-%    \email{claire.braboszcz@unige.ch}
-% }
-
-%(DH) my EPFL email address won't work for much longer....
+\numberofauthors{1} 
+\author{
+\alignauthor
+Séverin Lemaignan, Pierre Dillenbourg\\
+   \affaddr{Computer-Human Interaction in Learning and Instruction Laboratory (CHILI)}\\
+   \affaddr{École Polytechnique Fédérale\\ de Lausanne (EPFL)}\\
+   \affaddr{CH-1015 Lausanne, Switzerland}\\
+   \email{firstname.lastname@epfl.ch}
+\alignauthor
+Claire Braboszcz\\
+   \affaddr{Laboratory for Neurology \& \\Imaging of Cognition (LabNIC)}\\
+   \affaddr{University of Geneva}\\
+   \affaddr{CH-1211 Geneva, Switzerland}\\
+   \email{claire.braboszcz@unige.ch}
+}
 
 
 \begin{document}
@@ -137,11 +132,12 @@ Ros~\cite{Ros2010}).
 Based on perspective taking \emph{Level 1} alone, Breazeal
 \etal\cite{breazeal2009embodied} and Warnier \etal\cite{warnier2012when}
 successfully tackled the classical hallmark of theory of mind, the false belief
-experiment (Figure~\ref{false-beliefs}, introduced by~\cite{wimmer1983beliefs},
-original experimental setting by~\cite{baron1985does}). They demonstrated
-complete human-robot interaction scenarios where robots recognize and handle
-false belief situations in dyadic or triadic interactions, and exhibit helping
-behaviours that account for the missing/false beliefs of the human partners.
+experiment (also known as the ``Sally and Anne'' experiment,
+Figure~\ref{false-beliefs}, introduced by~\cite{wimmer1983beliefs}, original
+experimental setting by~\cite{baron1985does}). They demonstrated complete
+human-robot interaction scenarios where robots recognize and handle false belief
+situations in dyadic or triadic interactions, and exhibit helping behaviours
+that account for the missing/false beliefs of the human partners.
 
 \begin{figure*}[htb]
 \centering
@@ -225,8 +221,8 @@ and know as well that their own connections are independent of those of other
 people, they do not think that one concept can \emph{seriously} (\ie non
 playfully) hold several, possibly conflicting, representations.
 
-This \emph{connection-representation} account appears to be an significant
-component of a general theory of mind (one need to recognize that the same
+This \emph{connection-representation} account appears to be a significant
+component of a general theory of mind (one needs to recognize that the same
 object/concept may have different, serious, representations to then accept false
 beliefs for instance). Figure~\ref{representation-level} illustrates this
 difference between cognitive connections and representations in an imaginary
@@ -259,12 +255,12 @@ danger).
 \paragraph{Developmental pathopsychology}
 
 The false belief experiment that we have mentioned above, was proposed by
-Baron-Cohen in the frame of his research on autism (he shows that autistic
-children seem to actually lack a theory of mind and suggests this as the primary
-cause of their social impairments), and Frith and Happé further note in
-~\cite{frith1994autism} that this specific deficit of autism has led to a large
-amount of research which proved, in turn, highly beneficial to the study of the
-development of theory of mind in general. They reference
+Baron-Cohen in the frame of his research on autistic spectrum disorders (he
+shows that autistic children seem to actually lack a theory of mind and suggests
+this as the primary cause of their social impairments), and Frith and Happé
+further note in ~\cite{frith1994autism} that this specific deficit of autism has
+led to a large amount of research which proved, in turn, highly beneficial to
+the study of the development of theory of mind in general. They reference
 in~\cite{frith1994autism} eight such tasks (Table~\ref{mentalizing-tasks}),
 identified during the study of social cognition by autistic children. Each of
 them is proposed in two versions: one does not require mentalizing, while the
@@ -278,19 +274,19 @@ hereafter). These tasks prototypically illustrate social meta-cognition: one
 need to represent and reflect on someone else representations (and not only
 perceptions), and they are not addressed by today's research on social robots.
 
-Experimental protocols in research on autism are often striking by their
-apparent straightforwardness because of the careful choice of interaction
-modalities: since autistic children frequently exhibit impairments beyond social
-ones (such as motor or linguistic ones), the experiments must be designed such
-that they require only basic cognitive skills beyond the social abilities that
-are tested. The Sally and Anne task, for instance, requires the observing child
-to be able to visually follow the marble, to remember the true location of the
-marble, to understand simple questions (``Where will Sally look for her
-marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually to give
-an answer, either verbally or with a gesture -- the two first points being
-actually explicitly checked through questions: ``Where is the marble really?''
-(reality control question) and ``Where was the marble in the beginning?'' (memory
-control question).
+Experimental protocols in research on autistic spectrum disorders are often
+striking by their apparent straightforwardness because of the careful choice of
+interaction modalities: since autistic children frequently exhibit impairments
+beyond social ones (such as motor or linguistic ones), the experiments must be
+designed such that they require only basic cognitive skills beyond the social
+abilities that are tested. The Sally and Anne task, for instance, requires the
+observing child to be able to visually follow the marble, to remember the true
+location of the marble, to understand simple questions (``Where will Sally look
+for her marble?'' in Baron-Cohen's protocol~\cite{baron1985does}) and eventually
+to give an answer, either verbally or with a gesture -- the two first points
+being actually explicitly checked through questions: ``Where is the marble
+really?'' (reality control question) and ``Where was the marble in the
+beginning?'' (memory control question).
 
 Likewise, current social robots have limited cognitive skills (no fast yet fine
 motor skills, limited speech production and understanding, limited scene
@@ -395,10 +391,10 @@ changed the announced plan to go swimming. In one condition, the child and the
 father had previously mutually agreed, while in the other, no explicit agreement
 took place (to a child observer, it actually appears that the situation is
 \textbf{worse} if the child and the father did \textbf{not} previously
-explicitely agreed). Children before ten do not
+explicitely agree). Children before ten do not
 distinguish between the two conditions, and Verbrugge's proposed explanation
 relies on the concept of \emph{social commitment}, which implies
-the \emph{common belief} between the two agent that the father \emph{intends} to
+the \emph{common belief} between the two agents that the father \emph{intends} to
 go swimming and the child is \emph{interested} in going swimming.
 
 Common belief (``we believe that we believe that we believe that... we agreed'') is
@@ -429,7 +425,7 @@ instance.
 \emph{Computer Supported Collaborative Learning} (CSCL) researches the cognitive
 mechanisms and practical techniques underpinning efficient learning in social
 situations. From its very beginning, CSCL research has been following
-Roschelle and Teasley suggestion~\cite{roschelle1995construction} that
+Roschelle and Teasley's suggestion~\cite{roschelle1995construction} that
 collaborative learning has something to do with the process of constructing and
 maintaining a \emph{shared understanding} of the task at hand. Building a shared/mutual
 understanding refers to the upper class of collaborative learning situations,
@@ -447,19 +443,23 @@ distinguished from its meaning in the context of \emph{symbol grounding} as
 defined by Harnad~\cite{harnad1990symbol}.}~(Clark,
 in~\cite{clark1986referring}).  However, the relevance of grounding mechanisms
 for explaining learning outcomes has been questioned in learning sciences. The
-monitoring and repair of mis-understanding explains for instance referential
+monitoring and repair of misunderstanding explains for instance referential
 failures in short dialogue episodes but does hardly predict \emph{conceptual
 change} (\ie the acquisition, acceptation and integration of a new belief into
 one's mental model\fxnote{check with Pierre}) over longer
 sessions~\cite{dillenbourg2006sharing}. The cumulative effect of grounding
 episodes can probably be better understood from a socio-cultural perspective:
-\emph{``collaborative learning is associated with the increased
-    cognitive-interactional effort involved in the transition from \emph{learning to
-    understand each other} to \emph{learning to understand the meanings of the semiotic
+
+\begin{quote}
+Collaborative learning is associated with the increased
+cognitive-interactional effort involved in the transition from \emph{learning to
+understand each other} to \emph{learning to understand the meanings of the semiotic
 tools that constitute the mediators of interpersonal
-interaction}''}~\cite{baker1999role}\fxnote{Ask Pierre for explanations}, and
-several scholars suggest that CSCL research should go deeper in the
-understanding of how partners engage into shared meaning
+interaction}~\cite{baker1999role}
+\end{quote}
+
+Along this line, several scholars suggest that CSCL research should go deeper in
+the understanding of how partners engage into shared meaning
 making~\cite{stahl2007meaning} or \emph{intersubjective} meaning
 making~\cite{suthers2006technology}.
 
@@ -545,7 +545,7 @@ He parametrizes and assesses the mutual modelling \emph{effort} through 3 variab
         probability that $X$ is mutually understood by $A$ and $B$ (\eg $X$
         is part of $A$'s and $B$'s cultures, it is manifest to co-present
         subjects or simply there is not much space for misunderstanding
-        or disagreement about $X$). He note the theoretical accuracy of
+        or disagreement about $X$). He notes the theoretical accuracy of
         initial grounds $\mathcal{M}^{\circ}_{t_0}(A,B,X)$.
 
     \item The cost of grounding $X$ refers to the physical and cognitive effort
@@ -722,8 +722,8 @@ focuses on this question.
 \emph{Modal logics} look at the formal representation of \emph{possible
 worlds}, \ie the \emph{possibility} or \emph{necessity} of certain assertions
 to hold, and is naturally suited to build mathematical representations of
-situations such as ``\emph{the robot knows (the baby may not know what a power
-socket is)}''.
+situations such as ``\emph{the robot knows [the baby may not know what a power
+socket is]}''.
 
 The \emph{epistemic modal logic} in particular (see~\cite{hendricks2008epistemic} for an
 overview and references) focuses on the formal representation of
@@ -766,19 +766,18 @@ situations.
 Verbrugge further investigates the social aspect of epistemic logics
 in~\cite{verbrugge2009logic} and proposes a survey of epistemic logic
 applications to \emph{social reasoning}. He underlines both the limits of
-epistemic logic for that purpose (the common epistemic systems $\mathbf{S4}$ and
-$\mathbf{S5}$ assume for instance $\mathsf{K}_{i}\varphi \rightarrow
-\mathsf{K}_{i}\mathsf{K}_{i}\varphi$, which reads ``$i$ knows $\varphi$''
-implies ``$i$ knows that $i$ knows $\varphi$'', \ie $i$ can always introspect, a
-rather idealized model of human cognition) and the recent advancement towards
-modeling \emph{human} social cognition, which implies for instance limited
-rationality.  One of these attempts is formalized as a \emph{doxastic epistemic
-logic} by van Ditmarsch and Labuschagne in~\cite{ditmarsch2007beliefs}, with an
-explicit focus on modeling \emph{theory of mind} mechanisms. This model builds
-upon \emph{dynamic epistemic logic}~\cite{ditmarsch2007dynamic} (DEL, epistemic
-logics augmented with mechanisms for knowledge changes), and the
-modelling of agents' degrees of belief through a \emph{preference} accessibility
-relation.
+epistemic logic for that purpose (common epistemic systems assume for instance
+$\mathsf{K}_{i}\varphi \rightarrow \mathsf{K}_{i}\mathsf{K}_{i}\varphi$, which
+reads ``$i$ knows $\varphi$'' implies ``$i$ knows that $i$ knows $\varphi$'',
+\ie $i$ can always introspect, a rather idealized model of human cognition) and
+the recent advancement towards modelling \emph{human} social cognition, which
+implies for instance limited rationality.  One of these attempts is formalized
+as a \emph{doxastic epistemic logic} by van Ditmarsch and Labuschagne
+in~\cite{ditmarsch2007beliefs}, with an explicit focus on modelling \emph{theory
+of mind} mechanisms. This model builds upon \emph{dynamic epistemic
+logic}~\cite{ditmarsch2007dynamic} (DEL, epistemic logics augmented with
+mechanisms for knowledge changes), and the modelling of agents' degrees of
+belief through a \emph{preference} accessibility relation.
 
 The mathematical objects build from these different modal logics are natural
 candidates for transposition into representational systems and controllers for
@@ -812,14 +811,14 @@ successfully used in robotics (see~\cite{lemaignan2012symbolic} for a review).
 
 Several lessons can be taken out of these three perspectives on mutual modelling.
 First, \textbf{concepts} and terminology stand out and social robotics would
-benefit of incorporating them. Second, \textbf{models} of mutual modelling exist
+benefit from incorporating them. Second, \textbf{models} of mutual modelling exist
 that would make sense in robotics as well, along with investigation strategies
 and approaches that translate well to robotics. Finally, we believe that several
 \textbf{experimental settings} designed and successfully tested in other
 disciplines shape an interesting way forward for (experimental) social robotics.
 
 Flavell's distinction between \emph{cognitive connections} on one hand, and
-\emph{mental representation} on the other hand helps in recognizing
+\emph{mental representations} on the other hand helps in recognizing
 the limits of perceptual perspective taking as currently achieved in robotics.
 From an artificial intelligence perspective, this
 \emph{connection-representation} account indeed raises an interesting challenge:
@@ -873,18 +872,17 @@ human-robot interaction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Hidden for double blind review
-%\section*{Acknowledgments}
-%
-%This research was supported by the Swiss National Science Foundation through the
-%National Centre of Competence in Research Robotics.
-%
-% We would also like to thank Tony Belpaeme for his feedback on an early version
-% of this article.
+\section*{Acknowledgments}
+
+This research was supported by the Swiss National Science Foundation through the
+National Centre of Competence in Research Robotics.
+
+We would also like to thank Tony Belpaeme for his feedback on an early version
+of this article.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addtolength{\textheight}{-7.7cm}
+\addtolength{\textheight}{-5cm}
 %\begin{thebibliography}
 \bibliographystyle{abbrv}
 \bibliography{mutual-modelling}
