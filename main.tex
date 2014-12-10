@@ -818,12 +818,15 @@ and approaches that translate well to robotics. Finally, we believe that several
 disciplines shape an interesting way forward for (experimental) social robotics.
 
 Flavell's distinction between \emph{cognitive connections} on one hand, and
-\emph{mental representations} on the other hand helps in recognizing
-the limits of perceptual perspective taking as currently achieved in robotics.
-From an artificial intelligence perspective, this
-\emph{connection-representation} account indeed raises an interesting challenge:
-how to design a meta-representational system that supports and manipulates
-multiple cognitive connections \emph{and} representations.
+\emph{mental representations} on the other hand helps in recognizing the limits
+of perceptual perspective taking as currently achieved in robotics.  This
+\emph{connection-representation} account, put in perspective with the semantic
+expressiveness of modal logics, leads to a first insight: it may prove effective
+to design a meta-representational system (\ie, a system that \emph{represents
+representations} as abstracted, manipulable entities) to integrate into
+homogeneous objects both cognitive connections (\ie percepts) and representations
+(including suppositions -- \emph{pre-supposition accommodation}, for one, has
+been investigated in the past by Mavridis and Roy~\cite{Mavridis2006}).
 
 The depth of mutual modelling required for effective collaboration is another
 question that is relevant to human-robot interaction. Pickering and Garrod, with
@@ -834,24 +837,24 @@ ground, which is also expressed by Clark in terms of \emph{least collaborative
 effort} and Dillenbourg in terms of \emph{optimal collaborative effort}:
 misunderstandings should not be viewed as something to systematically avoid
 since the repair actions they may elicit can also be viewed as a way to engage
-the agents into new interactions. And Clark's concept of \emph{grounding
+the agents into new interactions (an idea not unrelated to the \emph{entropy}
+concept in information theory). And Clark's concept of \emph{grounding
 criterion} provides a practical tool to represent and manipulate this idea of
 degree of shared understanding required by the agents to perform a given task.
 
+These considerations lead to a second insight: the level of \emph{mutual
+grounding} (\ie of mutual understanding) of a given situation of interaction may
+prove to be a valuable metric to measure the quality of the human-robot interaction.
+Mutual modelling certainly plays a key role here, but lower-level, sub-cognitive
+strategies like one-off mimicking may be powerful complements and need to be
+investigated in parallel.
 
-%Clark and Dillenbourg developed this idea in
-%the context of collaborative learning (where social interactions are designed to
-%support learning), we believe it applies equally well to the context of
-%human-robot interaction.  In that respect, Clark's concept of \emph{grounding
-%criterion} provides a practical tool to represent and manipulate this idea of
-%degree of shared understanding required by the agents to perform a given task.
-
-The mere discussion of mutual modelling problems (``The robot knows that we both
-know that it knows that...'') is also often a challenge. Formal models like the
-ones developed in epistemic logic, or practical tools like the ones stemming
-from CSCL are valuable objects to add to the toolset of HRI. Not only they help
-clarifying the problems, but they also evidence new challenges: the definition
-of common-knowledge as $\mathsf{CK}_J\varphi \leftrightarrow
+Then, the mere discussion of mutual modelling problems (``The robot knows
+that we both know that it knows that...'') is also by itself a challenge. Formal
+models like the ones developed in epistemic logic, or practical tools like the
+ones stemming from CSCL are valuable objects to add to the toolset of HRI. Not
+only they help clarifying the problems, but they also evidence new challenges:
+the definition of common-knowledge as $\mathsf{CK}_J\varphi \leftrightarrow
 \mathsf{EK}_J\varphi \wedge \mathsf{EK}_J\mathsf{EK}_J\varphi \wedge
 \mathsf{EK}_J\mathsf{EK}_J\mathsf{EK}_J\varphi \wedge ...$ for instance points
 at the recursive nature of common knowledge. While ``common-sense knowledge'' is
@@ -859,6 +862,14 @@ a commonly-used term in the field of knowledge representation and reasoning to
 describe ``all those facts that everyone knows about'', it is probably important
 to better distinguish in the future between \emph{shared knowledge} and
 \emph{common knowledge} when a robot interact with a human.
+
+A third insight that follows relates to the adoption of modal logics in HRI: we
+believe that the current state of the technology in robotics (with the 
+advancements in scene understanding, situation assessment, human activity
+recognition, and their subsequent symbolic grounding), combined with our current
+understanding of modal logics (and epistemic logics in particular), lay the
+foundations for us to now broadly embrace formal models to implement new, complex
+social mechanisms in robots.
 
 Lastly, we hope that this article may suggest new ideas of experimental
 protocols and studies to conduct in HRI. We found experimental research in
@@ -882,7 +893,7 @@ of this article.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addtolength{\textheight}{-5cm}
+%\addtolength{\textheight}{-5cm}
 %\begin{thebibliography}
 \bibliographystyle{abbrv}
 \bibliography{mutual-modelling}
